@@ -6,14 +6,14 @@
     <title>Expense Reimbursement Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="lang-en"> <!-- ค่าเริ่มต้นเป็นภาษาอังกฤษตามที่คุณเพื่อนวางแผนไว้ -->
+<body class="lang-en"> <!-- ค่าเริ่มต้นตั้งเป็นภาษาอังกฤษตามที่คุณเพื่อนวางแผนไว้ -->
+
+    <!-- ปุ่มสลับภาษาแบบพรีเมียมลอยตัวขวาบน ผูกไอดี lang-toggle ตามรหัสแก้บั๊กของคุณเพื่อน -->
+    <div class="lang-switcher">
+        <button class="lang-btn" id="lang-toggle">TH / EN</button>
+    </div>
 
     <header>
-        <!-- ปุ่มสลับภาษาลอยตัว -->
-        <div class="lang-switcher">
-            <button class="lang-btn" onclick="toggleLanguage()">TH / EN</button>
-        </div>
-
         <h1 class="lang-en">Expense Reimbursement Guide</h1>
         <h1 class="lang-th">คู่มือการเบิกเงินสวัสดิการพนักงาน</h1>
         
@@ -38,7 +38,7 @@
         <h2 class="lang-en">1. Company Policy — Medical expenses</h2>
         <h2 class="lang-th">1. นโยบายบริษัท — ค่ารักษาพยาบาลและค่าสายตา</h2>
 
-        <!-- ส่วนตารางวงเงินสวัสดิการประจำปี (ขวาชิดตามคำสั่งคุณเพื่อน) -->
+        <!-- ส่วนตารางวงเงินสวัสดิการประจำปี ของบริษัท BE8 -->
         <h3 style="margin: 16px 0 8px 0; color: var(--color-primary); font-size: 1.15rem;">
             <span class="lang-en">Annual Welfare Budget Summary</span>
             <span class="lang-th">สรุปวงเงินสวัสดิการประจำปี</span>
@@ -153,4 +153,3 @@
                     <span class="lang-th">เอกสารหลักฐานการรักษาพยาบาลสามารถนำมาเบิกย้อนหลังได้สูงสุดไม่เกิน 1 เดือนเท่านั้น ตัวอย่างเช่น:</span>
                     <ul>
                         <li>
-                            <span class="lang-en"><span class="example-ok">✅ Allowed:</span> February receipts (Feb 1 - Feb 29) can be submitted in March.</span>
