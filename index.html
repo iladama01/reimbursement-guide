@@ -10,94 +10,79 @@
 
     <header>
         <h1>Expense Reimbursement Guide</h1>
-        <p style="font-size: 1.15rem; font-weight: 500; margin-top: 4px; color: var(--color-accent); font-family: 'Sarabun', sans-serif;">คู่มือการเบิกเงินสวัสดิการพนักงาน (BE8)</p>
-        <p style="margin-top: 10px; opacity: 0.8; font-size: 0.9rem; line-height: 1.6;">
-            Internal guide inside Salesforce 360 for employee expense claims.<br>
-            <span style="font-family: 'Sarabun', sans-serif; opacity: 0.85;">ระบบคู่มือแนะนำการยื่นขอเบิกเงินสวัสดิการภายในองค์กรผ่านระบบ Salesforce 360</span>
-        </p>
+        <p style="font-size: 1.15rem; font-weight: 500; margin-top: 4px; color: var(--color-accent); opacity: 0.9;">คู่มือการเบิกเงินสวัสดิการพนักงาน (BE8)</p>
+        <p style="margin-top: 8px; opacity: 0.75; font-size: 0.9rem;">Internal guide inside Salesforce 360 for employee expense claims. / ระบบคู่มือการยื่นเบิกเงินสวัสดิการภายในองค์กรบนระบบ Salesforce 360</p>
         
         <nav>
             <p>Menu / เมนูนำทาง</p>
             <ul>
-                <li><a href="#medical">1. Medical Expenses <span style="display: block; font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">1. นโยบายค่ารักษาพยาบาล</span></a></li>
-                <li><a href="#copay">2. Co-pay Claims <span style="display: block; font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">2. การเบิกจ่ายแบบ Co-pay</span></a></li>
-                <li><a href="#project-sales">3. Project &amp; Sales <span style="display: block; font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">3. ค่าใช้จ่ายโครงการและฝ่ายขาย</span></a></li>
-                <li><a href="#qa">4. Q&amp;A Section <span style="display: block; font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">4. คำถามที่พบบ่อย (Q&amp;A)</span></a></li>
-                <li><a href="#travel-form">5. Travel Form <span style="display: block; font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">5. ฟอร์มข้อมูลการเดินทาง</span></a></li>
+                <li><a href="#medical">1. Medical Expenses <span class="h-th">1. นโยบายค่ารักษาพยาบาล</span></a></li>
+                <li><a href="#copay">2. Co-pay Claims <span class="h-th">2. การเบิกจ่ายแบบ Co-pay</span></a></li>
+                <li><a href="#project-sales">3. Project &amp; Sales <span class="h-th">3. ค่าใช้จ่ายโครงการและฝ่ายขาย</span></a></li>
+                <li><a href="#qa">4. Q&amp;A Section <span class="h-th">4. คำถามที่พบบ่อย (Q&amp;A)</span></a></li>
+                <li><a href="#travel-form">5. Travel Form <span class="h-th">5. ฟอร์มข้อมูลการเดินทาง</span></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- ===== SECTION 1: MEDICAL POLICY ===== -->
     <section id="medical">
-        <h2>
-            1. Company Policy — Medical expenses<br>
-            <span style="font-size: 1.05rem; font-weight: 500; color: var(--color-text-muted); font-family: 'Sarabun', sans-serif; display: block; margin-top: 4px;">1. นโยบายบริษัท — ค่ารักษาพยาบาลและค่าสายตา</span>
-        </h2>
+        <h2>1. Company Policy — Medical expenses <span class="h-th">1. นโยบายบริษัท — ค่ารักษาพยาบาลและค่าสายตา</span></h2>
 
-        <!-- ตารางวงเงินงบประมาณสวัสดิการประจำปี (ช่องวงเงินต่อปี ชิดขวาเรียงแถวตรงเป๊ะสวยงาม) -->
+        <!-- ส่วนตารางสรุปงบประมาณวงเงินประจำปี (ปรับคอลัมน์ขวาเป็น Limit per Year และตั้งแนวชิดขวาตรงกันเป๊ะตามบรีฟ) -->
         <h3 style="margin: 24px 0 8px 0; color: var(--color-primary); font-size: 1.15rem;">
-            Annual Welfare Budget Summary <span style="font-weight: normal; font-size: 0.95rem; color: var(--color-text-muted); font-family: 'Sarabun', sans-serif;">/ สรุปวงเงินสวัสดิการประจำปี</span>
+            Annual Welfare Budget Summary <span class="h-th" style="display:inline; font-size:0.95rem; font-weight:normal;">/ สรุปวงเงินสวัสดิการประจำปี</span>
         </h3>
-        <table style="width: 100%; border-collapse: collapse; margin: 16px 0 12px 0; font-size: 0.95rem;">
+        <table class="data-table" style="width: 100%; border-collapse: collapse; margin: 16px 0 12px 0; font-size: 0.95rem;">
             <thead>
                 <tr style="background-color: #F8FAFC;">
-                    <th style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); text-align: left;">Welfare Category <span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">หมวดหมู่สวัสดิการ</span></th>
-                    <th style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); text-align: right; width: 45%;">Limit per Year <span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">วงเงินงบประมาณต่อปี</span></th>
+                    <th scope="col" style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); color: var(--color-primary); font-weight: 700; text-align: left;">Welfare Category <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">หมวดหมู่สวัสดิการ</span></th>
+                    <th scope="col" style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); color: var(--color-primary); font-weight: 700; text-align: right; width: 45%;">Limit per Year <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">วงเงินงบประมาณต่อปี</span></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Medical Expenses<span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่ารักษาพยาบาล (ครอบคลุมทั้งผู้ป่วยนอกและผู้ป่วยใน)</span></td>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary); vertical-align: top;">90,000 THB</td>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Medical expenses <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่ารักษาพยาบาล (ผู้ป่วยนอกและผู้ป่วยใน)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">90,000 THB</td>
                 </tr>
                 <tr>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Optical &amp; Glasses<span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าตัดแว่นสายตา (ครอบคลุมกรอบ แว่นสายตา และคอนแทคเลนส์)</span></td>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary); vertical-align: top;">10,000 THB</td>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Optical &amp; glasses <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าสายตาและแว่นตา (กรอบ แว่นสายตา และคอนแทคเลนส์)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">10,000 THB</td>
                 </tr>
                 <tr>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Dental Care<span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าทำฟัน (การรักษาทางทันตกรรม)</span></td>
-                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary); vertical-align: top;">3,000 THB</td>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Dental care <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าทันตกรรม (การรักษาทางทันตกรรม)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">3,000 THB</td>
                 </tr>
             </tbody>
         </table>
         
-        <!-- ข้อความใต้ตารางปรับเปลี่ยนเป็นชื่อเอกสาร Guidelines... ตัวหนาสีน้ำเงินเข้มคลีน ๆ เรียบร้อยแล้วค่ะ -->
-        <p style="margin-top: 0; margin-bottom: 28px; font-size: 0.95rem; font-weight: 700; color: var(--color-primary);">Guidelines for Medical Benefits Reimbursement</p>
+        <!-- แก้ไขสลับข้อความใต้ตารางเป็น Guidelines for Medical Benefits Reimbursement ตัวหนาสีน้ำเงินเข้มคลีน ๆ ตามสั่งเป๊ะเด็ดขาดเรียบร้อยค่ะ -->
+        <p class="table-note" style="margin-top: 0; margin-bottom: 28px; font-size: 0.95rem; font-weight: 700; color: var(--color-primary);">Guidelines for Medical Benefits Reimbursement</p>
         
-        <!-- กล่องเช็กเอกสารสำคัญ -->
+        <!-- กล่องเอกสารสำคัญ -->
         <div class="callout callout-info">
-            <p class="callout-title">Required Documents <span style="font-weight: normal; font-family: 'Sarabun', sans-serif; color: var(--color-text-muted);">/ เอกสารสำคัญที่ต้องนำส่งเพื่อขออนุมัติเบิก</span></p>
+            <p class="callout-title">Required Documents <span class="h-th">เอกสารสำคัญที่ต้องใช้เบิก</span></p>
             <ul class="checklist">
-                <li>
-                    Official Receipt
-                    <span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">ใบเสร็จรับเงิน (นำส่งฉบับจริง หรือไฟล์อิเล็กทรอนิกส์/รูปถ่ายหลักฐานที่คมชัดเจน)</span>
-                </li>
-                <li>
-                    Medical Certificate
-                    <span style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 2px; font-family: 'Sarabun', sans-serif;">ใบรับรองแพทย์ (ออกโดยสถานพยาบาลหรือคลินิกทางการแพทย์ที่ถูกต้องตามกฎหมาย)</span>
-                </li>
-                <li>
-                    <strong>For Optical/Glasses:</strong> Vision Test Result is strictly required.
-                    <span style="display: block; font-size: 0.85rem; color: #991B1B; font-weight: 500; margin-top: 2px; font-family: 'Sarabun', sans-serif;"><strong>กรณีค่าแว่นสายตา:</strong> พนักงานจำเป็นต้องแนบใบวัดค่าสายตาประกอบมาด้วยทุกครั้ง</span>
-                </li>
+                <li>Official Receipt <span class="cell-th">ใบเสร็จรับเงิน (ฉบับจริง หรือไฟล์อิเล็กทรอนิกส์/รูปถ่ายที่คมชัดชัดเจน)</span></li>
+                <li>Medical Certificate <span class="cell-th">ใบรับรองแพทย์ (ออกโดยสถานพยาบาลหรือคลินิกที่ถูกต้องตามกฎหมาย)</span></li>
+                <li><strong>For Optical/Glasses:</strong> Must attach Eye Exam/Vision Test Result every time. <span class="cell-th"><strong>กรณีค่าแว่นสายตา:</strong> ต้องแนบใบวัดค่าสายตาประกอบมาด้วยทุกครั้ง</span></li>
             </ul>
         </div>
 
-        <!-- กล่องเงื่อนไขช่องทางการส่งเอกสารแยกบรรทัดชัดเจน คลีน สะอาดตา -->
+        <!-- กล่องเงื่อนไขช่องทางการส่งเอกสารแบบ Block Layout แยกบรรทัดเป็นระเบียบเรียบร้อย สะอาดตา -->
         <div class="callout callout-warn">
-            <p class="callout-title">Submission Methods &amp; Conditions <span style="font-weight: normal; font-family: 'Sarabun', sans-serif; color: var(--color-text-muted);">/ เงื่อนไขและช่องทางการนำส่งเอกสาร</span></p>
+            <p class="callout-title">Submission Methods &amp; Conditions <span class="h-th">เงื่อนไขและช่องทางการนำส่งเอกสาร</span></p>
             <ul style="padding-left: 16px;">
                 <li style="margin-bottom: 14px;">
                     <strong>Electronic Documents:</strong> Create a Payment Voucher (PV) and attach all files on Salesforce 360, then submit online. No physical paper needed. <em>*Must be submitted before the 27th accounting deadline.</em>
                     <span style="display: block; font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif; line-height: 1.6;">
-                        <strong>เอกสารฉบับอิเล็กทรอนิกส์:</strong> ให้จัดทำเอกสาร Payment Voucher (PV) พร้อมแนบไฟล์หลักฐานบนระบบ Salesforce 360 แล้วดำเนินการ Submit ผ่านระบบได้ทันทีโดยไม่ต้องนำส่งเอกสารตัวจริง (แต่ต้องนำส่งให้เสร็จสิ้นก่อนวันปิดรับเอกสารวันที่ 27 ของเดือน)
+                        <strong>เอกสารฉบับอิเล็กทรอนิกส์:</strong> ให้ทำเอกสาร Payment Voucher (PV) พร้อมแนบไฟล์หลักฐานบนระบบ Salesforce 360 แล้วกด Submit ได้เลยโดยไม่ต้องนำส่งเอกสารตัวจริง (แต่ต้องส่งก่อนวันปิดรอบบัญชีวันที่ 27 ของเดือน)
                     </span>
                 </li>
                 <li style="margin-bottom: 6px;">
                     <strong>Paper Documents:</strong> Physical documents must be submitted to Accounting on the PV creation date, or strictly before the 27th of the month. You MUST clearly write the PV number on the documents (e.g., PT26-01-0001) to prevent loss or delayed processing.
                     <span style="display: block; font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif; line-height: 1.6;">
-                        <strong>เอกสารฉบับกระดาษ:</strong> ต้องนำส่งเอกสารตัวจริงให้ฝ่ายบัญชีในวันที่จัดทำ Payment Voucher หรือนำส่งไม่เกินวันที่ 27 ของเดือน พร้อมทั้งระบุเลขที่ Payment Voucher บนเอกสารหลักฐานให้ชัดเจน (เช่น PT26-01-0001) เพื่อป้องกันเอกสารสูญหายหรือเกิดความล่าช้าในการอนุมัติจ่าย
+                        <strong>เอกสารฉบับกระดาษ:</strong> ต้องนำส่งเอกสารตัวจริงให้ฝ่ายบัญชีในวันที่ทำ Payment Voucher หรือนำส่งไม่เกินวันที่ 27 ของเดือน พร้อมทั้งระบุเลขที่ Payment Voucher บนเอกสารให้ชัดเจน (เช่น PT26-01-0001) เพื่อป้องกันเอกสารสูญหายหรือตกหล่น
                     </span>
                 </li>
             </ul>
@@ -105,3 +90,26 @@
 
         <!-- ตารางคู่มือการกรอกระบบ Salesforce 360 -->
         <h3 style="margin: 28px 0 12px 0; color: var(--color-primary); font-size: 1.15rem;">
+            Salesforce 360 Input Guide <span class="h-th" style="display:inline; font-size:0.95rem; font-weight:normal;">/ คู่มือการระบุข้อมูลบนระบบ Salesforce 360</span>
+        </h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #F8FAFC;">
+                    <th style="padding: 12px; border-bottom: 2px solid var(--color-accent); width: 35%;">Salesforce Field</th>
+                    <th style="padding: 12px; border-bottom: 2px solid var(--color-accent); width: 65%;">Required Value / สิ่งที่ต้องระบุให้ถูกต้อง</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Request Type</strong></td>
+                    <td>Select <code>Healthcare and Optical</code> only. <span class="cell-th">เลือกเป็น <code>Healthcare and Optical</code> เท่านั้น</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Cost Center</strong></td>
+                    <td>Select <code>1001003 Human Resource</code>. <span class="cell-th">ระบุเป็น <code>1001003 Human Resource</code></span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Cost Element Name</strong></td>
+                    <td>Select <code>Health care</code>. <span class="cell-th">ระบุเป็น <code>Health care</code></span></td>
+                </tr>
+                <tr>
