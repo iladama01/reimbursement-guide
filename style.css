@@ -14,6 +14,7 @@
   --color-danger: #DC2626;     /* Red for warnings */
   --color-warn: #D97706;       /* Orange for rules */
   --color-success: #16A34A;    /* Green */
+  --border-color: #E5E7EB;
 }
 
 /* ===== 2. BASIC PAGE SETUP ===== */
@@ -25,7 +26,7 @@
 body {
   background-color: var(--color-bg-light);
   color: var(--color-text-main);
-  font-family: 'Public Sans', 'Sarabun', sans-serif; /* ผสานฟอนต์ตามข้อตกลง */
+  font-family: 'Public Sans', 'Sarabun', sans-serif; /* ผสานฟอนต์คู่ตามข้อตกลง */
   font-size: 16px;
   line-height: 1.7;
   padding-bottom: 60px;
@@ -45,7 +46,6 @@ body.lang-th [data-lang="en"] {
 body.lang-th [data-lang="th"] {
   display: block;
 }
-/* สไตล์สำหรับตารางที่ต้องเปิดบล็อกในภาษาไทย */
 body.lang-th tr[data-lang="th"], 
 body.lang-th span[data-lang="th"] {
   display: table-row !important;
@@ -65,7 +65,7 @@ body.lang-th span[data-lang="th"] {
   background-color: var(--color-accent);
   color: var(--color-white);
   border: none;
-  padding: 8px 16px;
+  padding: 8px 18px;
   font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
@@ -101,7 +101,7 @@ header p {
 /* ===== 5. MENU ===== */
 nav {
   background-color: var(--color-white);
-  border-bottom: 1px solid #E5E7EB;
+  border-bottom: 1px solid var(--border-color);
   padding: 16px 20px;
 }
 nav p {
@@ -199,13 +199,14 @@ table {
 }
 th, td {
   padding: 12px 14px;
-  border-bottom: 1px solid #E5E7EB;
+  border-bottom: 1px solid var(--border-color);
   text-align: left;
 }
 th {
   background-color: #F8FAFC;
   color: var(--color-primary);
   font-weight: 700;
+  border-bottom: 2px solid var(--color-accent);
 }
 code {
   font-family: 'Courier New', Courier, monospace;
