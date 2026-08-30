@@ -26,7 +26,77 @@
     <!-- ===== SECTION 1: MEDICAL POLICY ===== -->
     <section id="medical">
         <h2>1. Company Policy — Medical expenses</h2>
-        <p>Content for medical expenses policy will be here.</p>
+        
+        <div class="callout callout-info">
+            <p class="callout-title">Required Documents / เอกสารที่ต้องใช้เบิก</p>
+            <ul class="checklist">
+                <li>Receipt / ใบเสร็จรับเงิน (ฉบับจริงหรือรูปถ่ายที่คมชัด)</li>
+                <li>Medical Certificate / ใบรับรองแพทย์ (ออกโดยโรงพยาบาลหรือคลินิกที่ถูกต้องตามกฎหมาย)</li>
+                <li><strong>For Optical/Glasses:</strong> Must attach Eye Exam/Vision Test Result / <strong>กรณีค่าแว่นสายตา:</strong> ต้องแนบใบวัดค่าสายตามาด้วยทุกครั้ง</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-warn">
+            <p class="callout-title">Submission Rules &amp; Methods / เงื่อนไขและช่องทางการส่งเอกสาร</p>
+            <ul>
+                <li><strong>Electronic Docs (ฉบับอิเล็กทรอนิกส์):</strong> Create Payment Voucher (PV), attach files on Salesforce 360, and submit online. No paper needed &mdash; but you must still submit before the 27th.</li>
+                <li><strong>Paper Docs (ฉบับกระดาษ):</strong> Submit physical paper to Accounting on the PV creation date, or strictly before the 27th of the month. MUST write PV number clearly on the paper (e.g., PT26-01-0001) to prevent loss.</li>
+            </ul>
+        </div>
+
+        <h3 style="margin: 20px 0 10px 0; color: var(--color-primary); font-size: 1.1rem;">Salesforce 360 Input Guide / คู่มือการกรอกข้อมูลในระบบ</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <thead>
+                <tr style="background-color: var(--color-primary); color: white;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Salesforce Field</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Required Value / สิ่งที่ต้องระบุ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Request Type</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>Healthcare and Optical</code> (เท่านั้น)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Cost Center</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>1001003 Human Resource</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Cost Element Name</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>Health care</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Date</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุวันที่ตามเอกสารใบรับรองแพทย์</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Issuer Name</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุชื่อผู้ขอเบิก</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Amount</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);">ใสียอดเงินตามใบเสร็จ</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Description</strong></td>
+                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุการทำการรักษาตามใบรับรองแพทย์ (กรณีค่าแว่นสายตา ให้ระบุ ค่าตัดแว่นสายตา หรือ ค่าคอนแทคเลนส์)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-danger">
+            <p class="callout-title">Important Deadlines &amp; Rules (Mar's Red Flags ❌)</p>
+            <ul>
+                <li>Accounting closes on the <strong>27th of every month</strong>. This applies to <strong>both</strong> electronic and paper claims to enter the current payment cycle. ถ้ากด Submit มาแล้วต้องรีบนำส่งเอกสารทันทีเพื่อไม่ให้หลุดรอบจ่าย</li>
+                <li>Claims can only be backdated maximum 1 month / เอกสารสามารถเบิกย้อนหลังได้สูงสุด 1 เดือนเท่านั้น
+                    <ul>
+                        <li><span class="example-ok">✅ Allowed:</span> เอกสารของเดือน 2 (01.02.69 - 29.02.69) สามารถนำมาเบิกได้ในเดือน 3</li>
+                        <li><span class="example-no">❌ Expired:</span> เอกสารของเดือน 1 ทั้งเดือน จะไม่สามารถนำมาเบิกได้ในเดือน 3 (หลุดสิทธิ์ทันที)</li>
+                    </ul>
+                </li>
+                <li>เอกสารที่นำมาเบิกต้องถูกต้องครบถ้วนตามเงื่อนไขที่บริษัทกำหนดไว้บนพอร์ทัล BE-CONNEXT</li>
+            </ul>
+        </div>
     </section>
 
     <!-- ===== SECTION 2: CO-PAY CLAIMS ===== -->
