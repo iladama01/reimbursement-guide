@@ -8,124 +8,177 @@
 </head>
 <body>
 
+    <!-- ปุ่มสลับภาษา ลอยตัวอยู่มุมขวาบน -->
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="toggleLanguage()">TH / EN</button>
+    </div>
+
     <header>
-        <h1>Expense Reimbursement Guide</h1>
-        <p>Internal guide inside Salesforce 360 for employee expense claims.</p>
+        <h1 data-lang="en">Expense Reimbursement Guide</h1>
+        <h1 data-lang="th">คู่มือการเบิกเงินสวัสดิการพนักงาน</h1>
+        
+        <p data-lang="en">Internal guide inside Salesforce 360 for employee expense claims.</p>
+        <p data-lang="th">ระบบคู่มือภายในองค์กรบน Salesforce 360 สำหรับพนักงาน</p>
+        
         <nav>
-            <p>Menu</p>
+            <p data-lang="en">Menu</p>
+            <p data-lang="th">เมนูนำทาง</p>
             <ul>
-                <li><a href="#medical">1. Medical Policy</a></li>
-                <li><a href="#copay">2. Co-pay Claims</a></li>
-                <li><a href="#project-sales">3. Project &amp; Sales Expenses</a></li>
-                <li><a href="#qa">4. Q&amp;A Section</a></li>
-                <li><a href="#travel-form">5. Travel Form Setup</a></li>
+                <li>
+                    <a href="#medical">
+                        <span data-lang="en">1. Medical Policy</span>
+                        <span data-lang="th">1. นโยบายค่ารักษาพยาบาล</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#copay">
+                        <span data-lang="en">2. Co-pay Claims</span>
+                        <span data-lang="th">2. การเบิกจ่ายแบบ Co-pay</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#project-sales">
+                        <span data-lang="en">3. Project &amp; Sales</span>
+                        <span data-lang="th">3. ค่าใช้จ่ายโครงการและฝ่ายขาย</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#qa">
+                        <span data-lang="en">4. Q&amp;A Section</span>
+                        <span data-lang="th">4. คำถามที่พบบ่อย (Q&amp;A)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#travel-form">
+                        <span data-lang="en">5. Travel Form</span>
+                        <span data-lang="th">5. ฟอร์มข้อมูลการเดินทาง</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- ===== SECTION 1: MEDICAL POLICY ===== -->
     <section id="medical">
-        <h2>1. Company Policy — Medical expenses</h2>
+        <h2 data-lang="en">1. Company Policy — Medical expenses</h2>
+        <h2 data-lang="th">1. นโยบายบริษัท — ค่ารักษาพยาบาลและค่าสายตา</h2>
         
         <div class="callout callout-info">
-            <p class="callout-title">Required Documents / เอกสารที่ต้องใช้เบิก</p>
+            <p class="callout-title" data-lang="en">Required Documents</p>
+            <p class="callout-title" data-lang="th">เอกสารสำคัญที่ต้องใช้เบิก</p>
             <ul class="checklist">
-                <li>Receipt / ใบเสร็จรับเงิน (ฉบับจริงหรือรูปถ่ายที่คมชัด)</li>
-                <li>Medical Certificate / ใบรับรองแพทย์ (ออกโดยโรงพยาบาลหรือคลินิกที่ถูกต้องตามกฎหมาย)</li>
-                <li><strong>For Optical/Glasses:</strong> Must attach Eye Exam/Vision Test Result / <strong>กรณีค่าแว่นสายตา:</strong> ต้องแนบใบวัดค่าสายตามาด้วยทุกครั้ง</li>
+                <li>
+                    <span data-lang="en">Official Receipt (Original copy or clear digital file/photo)</span>
+                    <span data-lang="th">ใบเสร็จรับเงิน (ฉบับจริง หรือไฟล์อิเล็กทรอนิกส์/รูปถ่ายที่คมชัดชัดเจน)</span>
+                </li>
+                <li>
+                    <span data-lang="en">Medical Certificate (Issued by a legally certified hospital or clinic)</span>
+                    <span data-lang="th">ใบรับรองแพทย์ (ออกโดยโรงพยาบาลหรือคลินิกที่ถูกต้องตามกฎหมาย)</span>
+                </li>
+                <li>
+                    <span data-lang="en"><strong>For Optical/Glasses:</strong> Must attach Eye Exam/Vision Test Result every time.</span>
+                    <span data-lang="th"><strong>กรณีค่าแว่นสายตา:</strong> ต้องแนบใบวัดค่าสายตาประกอบมาด้วยทุกครั้ง</span>
+                </li>
             </ul>
         </div>
 
         <div class="callout callout-warn">
-            <p class="callout-title">Submission Rules &amp; Methods / เงื่อนไขและช่องทางการส่งเอกสาร</p>
+            <p class="callout-title" data-lang="en">Submission Methods &amp; Conditions</p>
+            <p class="callout-title" data-lang="th">เงื่อนไขและช่องทางการนำส่งเอกสาร</p>
             <ul>
-                <li><strong>Electronic Docs (ฉบับอิเล็กทรอนิกส์):</strong> Create Payment Voucher (PV), attach files on Salesforce 360, and submit online. No paper needed &mdash; but you must still submit before the 27th.</li>
-                <li><strong>Paper Docs (ฉบับกระดาษ):</strong> Submit physical paper to Accounting on the PV creation date, or strictly before the 27th of the month. MUST write PV number clearly on the paper (e.g., PT26-01-0001) to prevent loss.</li>
+                <li>
+                    <span data-lang="en"><strong>Electronic Documents:</strong> Create a Payment Voucher (PV), attach files on Salesforce 360, and submit online. No physical paper needed &mdash; but you must strictly submit before the 27th accounting deadline.</span>
+                    <span data-lang="th"><strong>เอกสารฉบับอิเล็กทรอนิกส์:</strong> ให้ทำเอกสาร Payment Voucher (PV) พร้อมแนบไฟล์หลักฐานบนระบบ Salesforce 360 แล้วกด Submit ได้เลยโดยไม่ต้องนำส่งเอกสารตัวจริง แต่ต้องส่งก่อนวันปิดรอบบัญชีวันที่ 27</span>
+                </li>
+                <li>
+                    <span data-lang="en"><strong>Paper Documents:</strong> Submit physical paper to Accounting on the PV creation date, or strictly before the 27th of the month. You MUST write the PV number clearly on the paper (e.g., PT26-01-0001) to prevent loss.</span>
+                    <span data-lang="th"><strong>เอกสารฉบับกระดาษ:</strong> ต้องนำส่งเอกสารตัวจริงให้ฝ่ายบัญชีในวันที่ทำ Payment Voucher หรือนำส่งไม่เกินวันที่ 27 ของเดือน พร้อมทั้งระบุเลขที่ Payment Voucher บนเอกสารให้ชัดเจน (เช่น PT26-01-0001) เพื่อป้องกันเอกสารสูญหายหรือตกหล่น</span>
+                </li>
             </ul>
         </div>
 
-        <h3 style="margin: 20px 0 10px 0; color: var(--color-primary); font-size: 1.1rem;">Salesforce 360 Input Guide / คู่มือการกรอกข้อมูลในระบบ</h3>
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <h3 style="margin: 24px 0 12px 0; color: var(--color-primary); font-size: 1.15rem;">
+            <span data-lang="en">Salesforce 360 Input Guide</span>
+            <span data-lang="th">คู่มือการระบุข้อมูลบนระบบ Salesforce 360</span>
+        </h3>
+        <table>
             <thead>
-                <tr style="background-color: var(--color-primary); color: white;">
-                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Salesforce Field</th>
-                    <th style="padding: 10px; text-align: left; border: 1px solid var(--border-color);">Required Value / สิ่งที่ต้องระบุ</th>
+                <tr>
+                    <th style="width: 35%;">Salesforce Field</th>
+                    <th style="width: 65%;">
+                        <span data-lang="en">Required Value</span>
+                        <span data-lang="th">สิ่งที่ต้องระบุให้ถูกต้อง</span>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Request Type</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>Healthcare and Optical</code> (เท่านั้น)</td>
+                    <td><strong>Request Type</strong></td>
+                    <td>
+                        <span data-lang="en">Select <code>Healthcare and Optical</code> only.</span>
+                        <span data-lang="th">เลือกเป็น <code>Healthcare and Optical</code> เท่านั้น</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Cost Center</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>1001003 Human Resource</code></td>
+                    <td><strong>Cost Center</strong></td>
+                    <td>
+                        <span data-lang="en">Select <code>1001003 Human Resource</code>.</span>
+                        <span data-lang="th">ระบุเป็น <code>1001003 Human Resource</code></span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Cost Element Name</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><code>Health care</code></td>
+                    <td><strong>Cost Element Name</strong></td>
+                    <td>
+                        <span data-lang="en">Select <code>Health care</code>.</span>
+                        <span data-lang="th">ระบุเป็น <code>Health care</code></span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Date</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุวันที่ตามเอกสารใบรับรองแพทย์</td>
+                    <td><strong>Date</strong></td>
+                    <td>
+                        <span data-lang="en">Enter the exact date matching your Medical Certificate.</span>
+                        <span data-lang="th">ระบุวันที่ให้ตรงตามเอกสารใบรับรองแพทย์</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Issuer Name</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุชื่อผู้ขอเบิก</td>
+                    <td><strong>Issuer Name</strong></td>
+                    <td>
+                        <span data-lang="en">Enter the name of the claimant.</span>
+                        <span data-lang="th">ระบุชื่อ-นามสกุลของผู้ขอเบิก</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Amount</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);">ใสียอดเงินตามใบเสร็จ</td>
+                    <td><strong>Amount</strong></td>
+                    <td>
+                        <span data-lang="en">Enter the exact total amount shown on the receipt.</span>
+                        <span data-lang="th">ใส่ยอดเงินรวมให้ตรงตามที่ปรากฏในใบเสร็จรับเงิน</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);"><strong>Description</strong></td>
-                    <td style="padding: 10px; border: 1px solid var(--border-color);">ระบุการทำการรักษาตามใบรับรองแพทย์ (กรณีค่าแว่นสายตา ให้ระบุ ค่าตัดแว่นสายตา หรือ ค่าคอนแทคเลนส์)</td>
+                    <td><strong>Description</strong></td>
+                    <td>
+                        <span data-lang="en">Specify the treatment details from the medical certificate. (For optical claims, state "Glasses" or "Contact Lenses").</span>
+                        <span data-lang="th">ระบุรายละเอียดการรักษาพยาบาลตามใบรับรองแพทย์ (หากเป็นค่าแว่นสายตา ให้ระบุ ค่าตัดแว่นสายตา หรือ ค่าคอนแทคเลนส์)</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
         <div class="callout callout-danger">
-            <p class="callout-title">Important Deadlines &amp; Rules (Mar's Red Flags ❌)</p>
+            <p class="callout-title" data-lang="en">Important Deadlines &amp; Rules (Notes)</p>
+            <p class="callout-title" data-lang="th">หมายเหตุ — กำหนดส่งและข้อควรระวังสำคัญ</p>
             <ul>
-                <li>Accounting closes on the <strong>27th of every month</strong>. This applies to <strong>both</strong> electronic and paper claims to enter the current payment cycle. ถ้ากด Submit มาแล้วต้องรีบนำส่งเอกสารทันทีเพื่อไม่ให้หลุดรอบจ่าย</li>
-                <li>Claims can only be backdated maximum 1 month / เอกสารสามารถเบิกย้อนหลังได้สูงสุด 1 เดือนเท่านั้น
-                    <ul>
-                        <li><span class="example-ok">✅ Allowed:</span> เอกสารของเดือน 2 (01.02.69 - 29.02.69) สามารถนำมาเบิกได้ในเดือน 3</li>
-                        <li><span class="example-no">❌ Expired:</span> เอกสารของเดือน 1 ทั้งเดือน จะไม่สามารถนำมาเบิกได้ในเดือน 3 (หลุดสิทธิ์ทันที)</li>
-                    </ul>
+                <li>
+                    <span data-lang="en">Accounting closes on the <strong>27th of every month</strong>. This applies to <strong>both</strong> electronic and paper claims to enter the current payment cycle. If you click submit, please ensure paper docs reach Accounting immediately.</span>
+                    <span data-lang="th">ฝ่ายบัญชีจะปิดรับเอกสารเบิกทุกวันที่ <strong>27 ของเดือน</strong> ซึ่งใช้เกณฑ์นี้ร่วมกันทั้งระบบออนไลน์และเอกสารกระดาษ หากกด Submit มาแล้วต้องรีบนำส่งเอกสารทันทีเพื่อไม่ให้หลุดรอบการจ่ายเงินในเดือนนั้น</span>
                 </li>
-                <li>เอกสารที่นำมาเบิกต้องถูกต้องครบถ้วนตามเงื่อนไขที่บริษัทกำหนดไว้บนพอร์ทัล BE-CONNEXT</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- ===== SECTION 2: CO-PAY CLAIMS ===== -->
-    <section id="copay">
-        <h2>2. Co-pay Claims</h2>
-        <p>Step-by-step instructions and sample documents will be here.</p>
-    </section>
-
-    <!-- ===== SECTION 3: PROJECT & SALES EXPENSES ===== -->
-    <section id="project-sales">
-        <h2>3. Project &amp; Sales Expenses</h2>
-        <p>Conditions and receipts for food and travel will be here.</p>
-    </section>
-
-    <!-- ===== SECTION 4: Q&A SECTION ===== -->
-    <section id="qa">
-        <h2>4. Q&amp;A Section</h2>
-        <p>Frequently asked questions to cut down support requests.</p>
-    </section>
-
-    <!-- ===== SECTION 5: TRAVEL FORM SETUP ===== -->
-    <section id="travel-form">
-        <h2>5. Travel Form Setup</h2>
-        <p>Standard template for logging Date, Origin/Destination, and Client Site.</p>
-    </section>
-
-    <footer>
-        <p>© 2026 Beryl 8 Plus Public Company Limited. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+                <li>
+                    <span data-lang="en">Claims can only be backdated for a maximum of 1 month.</span>
+                    <span data-lang="th">เอกสารหลักฐานการรักษาพยาบาลสามารถนำมาเบิกย้อนหลังได้สูงสุดไม่เกิน 1 เดือนเท่านั้น ตัวอย่างเช่น:</span>
+                    <ul>
+                        <li>
+                            <span data-lang="en"><span class="example-ok">✅ Allowed:</span> February receipts (Feb 1 - Feb 29) can be submitted in March.</span>
+                            <span data-lang="th"><span class="example-ok">✅ เบิกได้:</span> เอกสารของเดือน 2 (วันที่ 01.02.69 ถึง 29.02.69) สามารถนำมาเบิกในรอบเดือน 3 ได้</span>
+                        </li>
+                        <li>
+                            <span data-lang="en"><span class="example-no">❌ Expired:</span> January receipts CANNOT be submitted in March (Forfeited).</span>
