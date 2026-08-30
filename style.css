@@ -26,7 +26,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== 3. TOP OF PAGE & LOGO ===== */
+/* ===== 3. TOP OF PAGE & LOGO DESIGN ===== */
 header {
   background-color: var(--color-primary);
   color: #ffffff;
@@ -41,15 +41,17 @@ header p {
   margin: 0;
   opacity: 0.9;
 }
-.logo-link {
+
+/* ดีไซน์ตัวหนังสือธรรมดาให้กลายเป็นโลโก้แบรนด์พรีเมียม */
+.logo-text {
   display: inline-block;
-  margin-bottom: 16px;
-}
-.logo {
-  display: block;
-  height: 35px;        /* ควบคุมขนาดความสูงของโลโก้ */
-  width: auto;
-  max-width: 190px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  margin-bottom: 12px;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 2px;
 }
 
 /* ===== 4. MENU ===== */
@@ -114,13 +116,9 @@ section p {
 @media (min-width: 700px) {
   header {
     padding: 44px 40px;
-    text-align: left; /* จัดโลโก้และหัวข้อชิดซ้ายสไตล์ระบบพรีเมียม */
+    text-align: left;
     max-width: 900px;
     margin: 0 auto;
-  }
-  .logo {
-    height: 45px;    /* ขยายโลโก้ให้ใหญ่ขึ้นบนหน้าจอคอม */
-    max-width: 240px;
   }
   nav {
     padding-left: 40px;
