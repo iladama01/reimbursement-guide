@@ -1,23 +1,19 @@
-/* นำเข้าฟอนต์ Public Sans จาก Google Fonts สำหรับภาษาอังกฤษ */
 @import url('https://googleapis.com');
-/* นำเข้าฟอนต์ Sarabun สำหรับภาษาไทย */
 @import url('https://googleapis.com');
 
-/* ===== 1. BRAND COLORS (BE8 OFFICIAL THEME) ===== */
 :root {
-  --color-primary: #0E2B5C;     /* Beryl Navy Blue */
-  --color-accent: #00A3E0;      /* Digital Cyan */
-  --color-bg-light: #F4F7FA;    /* Ice Blue/Light Gray */
-  --color-text-main: #1F2937;   /* Charcoal Gray */
-  --color-text-muted: #4B5563;  /* Muted Gray */
-  --color-white: #FFFFFF;       /* Pure White */
-  --color-danger: #DC2626;     /* Red for warnings */
-  --color-warn: #D97706;       /* Orange for rules */
-  --color-success: #16A34A;    /* Green */
+  --color-primary: #0E2B5C;
+  --color-accent: #00A3E0;
+  --color-bg-light: #F4F7FA;
+  --color-text-main: #1F2937;
+  --color-text-muted: #4B5563;
+  --color-white: #FFFFFF;
+  --color-danger: #DC2626;
+  --color-warn: #D97706;
+  --color-success: #16A34A;
   --border-color: #E5E7EB;
 }
 
-/* ===== 2. BASIC PAGE SETUP ===== */
 {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +22,7 @@
 body {
   background-color: var(--color-bg-light);
   color: var(--color-text-main);
-  font-family: 'Public Sans', 'Sarabun', sans-serif; /* ผสานฟอนต์คู่ตามข้อตกลง */
+  font-family: 'Public Sans', 'Sarabun', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   padding-bottom: 60px;
@@ -35,26 +31,28 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== 3. LANGUAGE TOGGLE SYSTEM ===== */
-/* ซ่อนข้อความภาษาไทยไว้เป็นค่าเริ่มต้น ระบบจะเปิดเมื่อกดปุ่ม */
+/* ===== CONTROL LANG VISIBILITY ===== */
+/* ซ่อนเนื้อหาภาษาไทยในสถานะเริ่มต้น */
 [data-lang="th"] {
-  display: none;
+  display: none !important;
 }
+[data-lang="en"] {
+  display: inline-block;
+}
+/* สลับเป็นซ่อนภาษาอังกฤษ และแสดงภาษาไทย เมื่อเปิดคลาส lang-th */
 body.lang-th [data-lang="en"] {
-  display: none;
+  display: none !important;
 }
 body.lang-th [data-lang="th"] {
-  display: block;
+  display: inline-block !important;
 }
-body.lang-th tr[data-lang="th"], 
-body.lang-th span[data-lang="th"] {
-  display: table-row !important;
-}
-body.lang-th span[data-lang="th"] {
-  display: inline !important;
+body.lang-th h1[data-lang="th"],
+body.lang-th h2[data-lang="th"],
+body.lang-th p[data-lang="th"] {
+  display: block !important;
 }
 
-/* ดีไซน์ปุ่มสลับภาษาลอยตัวสุดพรีเมียมขวาบน */
+/* ดีไซน์ปุ่มสลับภาษาลอยตัวสุดพรีเมียม */
 .lang-switcher {
   position: absolute;
   top: 20px;
@@ -79,7 +77,6 @@ body.lang-th span[data-lang="th"] {
   box-shadow: 0 6px 14px rgba(0, 163, 224, 0.4);
 }
 
-/* ===== 4. TOP OF PAGE ===== */
 header {
   position: relative;
   background-color: var(--color-primary);
@@ -90,7 +87,6 @@ header h1 {
   margin: 0 0 8px 0;
   font-size: 1.8rem;
   font-weight: 800;
-  letter-spacing: -0.5px;
 }
 header p {
   margin: 0;
@@ -98,11 +94,12 @@ header p {
   font-size: 0.95rem;
 }
 
-/* ===== 5. MENU ===== */
 nav {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--border-color);
   padding: 16px 20px;
+  margin-top: 12px;
+  border-radius: 8px;
 }
 nav p {
   margin: 0 0 10px 0;
@@ -127,20 +124,18 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.2s;
 }
 nav a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-/* ===== 6. SECTIONS AS CARDS ===== */
 section {
   background-color: var(--color-white);
   margin: 20px 14px;
   padding: 24px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   scroll-margin-top: 20px;
 }
 section h2 {
@@ -152,7 +147,6 @@ section h2 {
   font-weight: 800;
 }
 
-/* ===== 7. CALLOUT BOXES ===== */
 .callout {
   padding: 16px;
   border-left: 4px solid transparent;
@@ -190,7 +184,6 @@ ul.checklist li::before {
   font-weight: 800;
 }
 
-/* ===== 8. PREMIUM TABLES ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -200,7 +193,6 @@ table {
 th, td {
   padding: 12px 14px;
   border-bottom: 1px solid var(--border-color);
-  text-align: left;
 }
 th {
   background-color: #F8FAFC;
@@ -214,7 +206,6 @@ code {
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 700;
-  color: #2D3748;
 }
 .example-ok { color: var(--color-success); font-weight: 700; }
 .example-no { color: var(--color-danger); font-weight: 700; }
@@ -226,7 +217,6 @@ footer {
   text-align: center;
 }
 
-/* ===== 9. BIGGER SCREENS (Laptop Adjustments) ===== */
 @media (min-width: 700px) {
   body {
     max-width: 900px;
@@ -242,7 +232,6 @@ footer {
   }
   nav {
     padding: 20px 40px;
-    border-radius: 12px;
     margin-top: 16px;
   }
   nav ul {
