@@ -1,164 +1,122 @@
-  <!-- =========================================================
-       SECTION 2: CO-PAY CLAIMS
-       ========================================================= -->
-  <section id="copay">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Reimbursement Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h2>
-      2. Co-pay Claims &mdash; Claude Pro Subscription
-      <span class="h-th">2. การเบิกจ่ายแบบ Co-pay &mdash; ค่าบริการ คลาวด์ โปร</span>
-    </h2>
+    <header>
+        <h1>Expense Reimbursement Guide</h1>
+        <p style="font-size: 1.15rem; font-weight: 500; margin-top: 4px; color: var(--color-accent); opacity: 0.9;">คู่มือการเบิกเงินสวัสดิการพนักงาน (BE8)</p>
+        <p style="margin-top: 8px; opacity: 0.75; font-size: 0.9rem;">Internal guide inside Salesforce 360 for employee expense claims. / ระบบคู่มือการยื่นเบิกเงินสวัสดิการภายในองค์กรบนระบบ Salesforce 360</p>
+        
+        <nav>
+            <p>Menu / เมนูนำทาง</p>
+            <ul>
+                <li><a href="#medical">1. Medical Expenses <span class="h-th">1. นโยบายค่ารักษาพยาบาล</span></a></li>
+                <li><a href="#copay">2. Co-pay Claims <span class="h-th">2. การเบิกจ่ายแบบ Co-pay</span></a></li>
+                <li><a href="#project-sales">3. Project &amp; Sales <span class="h-th">3. ค่าใช้จ่ายโครงการและฝ่ายขาย</span></a></li>
+                <li><a href="#qa">4. Q&amp;A Section <span class="h-th">4. คำถามที่พบบ่อย (Q&amp;A)</span></a></li>
+                <li><a href="#travel-form">5. Travel Form <span class="h-th">5. ฟอร์มข้อมูลการเดินทาง</span></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p style="font-weight: 700; color: var(--color-primary); margin: 6px 0 22px;">
-      Guidelines for Claude Pro Subscription Reimbursement
-      <span class="h-th">แนวทางการขอรับเงินคืนค่าบริการ Claude Pro (Co-pay)</span>
-    </p>
+    <!-- ===== SECTION 1: MEDICAL POLICY ===== -->
+    <section id="medical">
+        <h2>1. Company Policy — Medical expenses <span class="h-th">1. นโยบายบริษัท — ค่ารักษาพยาบาลและค่าสายตา</span></h2>
 
-    <!-- --- Input guide --- -->
-    <h3>
-      Entering the request in BE360
-      <span class="h-th">การบันทึกข้อมูลในระบบ BE360</span>
-    </h3>
-
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th scope="col">Field <span class="cell-th">ช่องข้อมูล</span></th>
-          <th scope="col">Required value <span class="cell-th">ข้อมูลที่ต้องกรอก</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Request Type</td>
-          <td>Select <code>Payment Voucher</code>
-            <span class="cell-th">เลือก <code>Payment Voucher</code> เท่านั้น</span></td>
-        </tr>
-        <tr>
-          <td>Cost Center</td>
-          <td>Select <code>1001003 Human Resource</code>
-            <span class="cell-th">เลือก <code>1001003 Human Resource</code></span></td>
-        </tr>
-        <tr>
-          <td>Cost Element Name</td>
-          <td>Select <code>License / Subscription / Membership Fees</code>
-            <span class="cell-th">เลือก <code>License / Subscription / Membership Fees</code></span></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Enter the exact date printed on the Anthropic, PBC receipt
-            <span class="cell-th">ระบุวันที่ให้ตรงตามใบเสร็จรับเงินของ Anthropic, PBC</span></td>
-        </tr>
-        <tr>
-          <td>Issuer Name</td>
-          <td>Must be entered exactly as <code>Anthropic, PBC</code>
-            <span class="cell-th">ต้องระบุเป็น <code>Anthropic, PBC</code> เท่านั้น</span></td>
-        </tr>
-        <tr>
-          <td>Amount</td>
-          <td>Enter the total amount calculated at 50% Co-pay, in line with company policy
-            <span class="cell-th">ใส่ยอดเงินรวมที่คิดจากสัดส่วน 50% Co-pay ตามหลักเกณฑ์เงื่อนไขนโยบายของบริษัท</span></td>
-        </tr>
-        <tr>
-          <td>Description</td>
-          <td>Must follow this format:
-            <code>Anthropic, PBC, Claude Pro [Usage Period], Co-pay</code><br>
-            Example: <code>Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay</code>
-            <span class="cell-th">ต้องระบุรูปแบบดังนี้:
-              <code>Anthropic, PBC, Claude Pro [รอบช่วงเวลาการใช้งาน], Co-pay</code><br>
-              ตัวอย่าง: <code>Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay</code></span></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- --- Notes --- -->
-    <h3>
-      Notes
-      <span class="h-th">หมายเหตุ</span>
-    </h3>
-
-    <div class="callout callout-danger">
-      <div class="bi">
-        <div class="bi-col">
-          <p class="callout-title">Strict policy rules &mdash; please read before claiming</p>
-          <ul class="plain-list">
-            <li><strong>The 30-day deadline is strict.</strong> A claim must be submitted
-              within 30 days of the payment date. After that, the entitlement is forfeited.</li>
-            <li><strong>Do not wait.</strong> Create the BE360 Payment Voucher as soon as you
-              receive the Anthropic subscription receipt and have the credit card statement
-              showing the converted THB amount. Waiting is the most common reason employees
-              miss the payment cycle.</li>
-            <li><strong>The monthly cap is THB 1,500 per employee.</strong> Any amount above
-              the cap cannot be reimbursed.</li>
-          </ul>
+        <!-- ส่วนตารางสรุปงบประมาณวงเงินประจำปี (จัดแถวชิดขวาเป๊ะตรงตารางสวยงามตามสั่ง) -->
+        <h3 style="margin: 20px 0 8px 0; color: var(--color-primary); font-size: 1.15rem;">
+            Annual Welfare Budget Summary <span class="h-th" style="display:inline; font-size:0.95rem; font-weight:normal;">/ สรุปวงเงินสวัสดิการประจำปี</span>
+        </h3>
+        <table class="data-table" style="width: 100%; border-collapse: collapse; margin: 16px 0 24px 0; font-size: 0.95rem;">
+            <thead>
+                <tr style="background-color: #F8FAFC;">
+                    <th scope="col" style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); color: var(--color-primary); font-weight: 700; text-align: left;">Type <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ประเภท</span></th>
+                    <th scope="col" style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); color: var(--color-primary); font-weight: 700; text-align: right; width: 40%;">Limit per Year <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">วงเงินงบประมาณต่อปี</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Medical expenses <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่ารักษาพยาบาล (ผู้ป่วยนอกและผู้ป่วยใน)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">90,000 THB</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Optical &amp; glasses <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าสายตาและแว่นตา (กรอบ แว่นสายตา และคอนแทคเลนส์)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">10,000 THB</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top;">Dental care <span class="cell-th" style="display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; font-family: 'Sarabun', sans-serif;">ค่าทันตกรรม (การรักษาทางทันตกรรม)</span></td>
+                    <td class="amount" style="padding: 12px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; text-align: right; font-weight: 700; font-family: 'Courier New', Courier, monospace; font-size: 1.05rem; color: var(--color-primary);">3,000 THB</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="table-note" style="margin-top: -16px; margin-bottom: 24px; font-size: 0.85rem; color: var(--color-text-muted);">All amounts in THB per calendar year. / หน่วยเป็นบาท ต่อปีปฏิทิน</p>
+        
+        <!-- กล่องเอกสารสำคัญ -->
+        <div class="callout callout-info">
+            <p class="callout-title">Required Documents <span class="h-th">เอกสารสำคัญที่ต้องใช้เบิก</span></p>
+            <ul class="checklist">
+                <li>Official Receipt <span class="cell-th">ใบเสร็จรับเงิน (ฉบับจริง หรือไฟล์อิเล็กทรอนิกส์/รูปถ่ายที่คมชัดชัดเจน)</span></li>
+                <li>Medical Certificate <span class="cell-th">ใบรับรองแพทย์ (ออกโดยสถานพยาบาลหรือคลินิกที่ถูกต้องตามกฎหมาย)</span></li>
+                <li><strong>For Optical/Glasses:</strong> Must attach Eye Exam/Vision Test Result every time. <span class="cell-th"><strong>กรณีค่าแว่นสายตา:</strong> ต้องแนบใบวัดค่าสายตาประกอบมาด้วยทุกครั้ง</span></li>
+            </ul>
         </div>
-        <div class="bi-col bi-th">
-          <p class="callout-title">ข้อกำหนดสำคัญ &mdash; กรุณาอ่านก่อนยื่นขอเบิก</p>
-          <ul class="plain-list">
-            <li><strong>กำหนด 30 วันเป็นข้อบังคับ</strong> ต้องยื่นขอเบิกภายใน 30 วัน
-              นับจากวันที่ชำระเงิน หากเกินกำหนด จะถือว่าสละสิทธิ์</li>
-            <li><strong>ไม่ควรรอ</strong> กรุณาสร้างเอกสาร Payment Voucher ในระบบ BE360 ทันที
-              เมื่อได้รับใบเสร็จรับเงินค่าบริการจาก Anthropic และมีภาพหน้าจอยอดบัตรเครดิต
-              ที่แสดงยอดเงินสกุลบาทแล้ว การรอเป็นสาเหตุที่ทำให้พลาดรอบการจ่ายเงินมากที่สุด</li>
-            <li><strong>วงเงินสูงสุด 1,500 บาทต่อเดือนต่อพนักงาน 1 คน</strong>
-              ส่วนที่เกินวงเงินจะไม่สามารถเบิกได้</li>
-          </ul>
+
+        <!-- กล่องเงื่อนไขช่องทางการส่งเอกสารแบบ True Side-by-Side -->
+        <div class="callout callout-warn">
+            <p class="callout-title">Submission Methods &amp; Conditions <span class="h-th">เงื่อนไขและช่องทางการนำส่งเอกสาร</span></p>
+            
+            <div class="bi">
+                <div class="bi-col">
+                    <strong>Electronic Documents:</strong> Create a Payment Voucher (PV) and attach all files on Salesforce 360, then submit online. No physical paper needed. <em>*Must be submitted before the 27th accounting deadline.</em>
+                </div>
+                <div class="bi-col bi-th">
+                    <strong>เอกสารฉบับอิเล็กทรอนิกส์:</strong> ให้ทำเอกสาร Payment Voucher (PV) พร้อมแนบไฟล์หลักฐานบนระบบ Salesforce 360 แล้วกด Submit ได้เลยโดยไม่ต้องนำส่งเอกสารตัวจริง (แต่ต้องส่งก่อนวันปิดรอบบัญชีวันที่ 27 ของเดือน)
+                </div>
+            </div>
+
+            <div class="bi" style="margin-top: 16px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+                <div class="bi-col">
+                    <strong>Paper Documents:</strong> Physical documents must be submitted to Accounting on the PV creation date, or strictly before the 27th of the month. You MUST clearly write the PV number on the documents (e.g., PT26-01-0001) to prevent loss or delayed processing.
+                </div>
+                <div class="bi-col bi-th" style="border-top:none; padding-top:0;">
+                    <strong>เอกสารฉบับกระดาษ:</strong> ต้องนำส่งเอกสารตัวจริงให้ฝ่ายบัญชีในวันที่ทำ Payment Voucher หรือนำส่งไม่เกินวันที่ 27 ของเดือน พร้อมทั้งระบุเลขที่ Payment Voucher บนเอกสารให้ชัดเจน (เช่น PT26-01-0001) เพื่อป้องกันเอกสารสูญหายหรือตกหล่น
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- --- Sample documents --- -->
-    <h3>
-      Sample documents
-      <span class="h-th">ตัวอย่างเอกสาร</span>
-    </h3>
-
-    <div class="bi">
-      <div class="bi-col">
-        <p class="bi-label">English</p>
-        <p>Compare your own documents with the samples below before submitting.</p>
-      </div>
-      <div class="bi-col bi-th">
-        <p class="bi-label">ภาษาไทย</p>
-        <p>กรุณาตรวจสอบเอกสารของท่านเทียบกับตัวอย่างด้านล่างก่อนยื่นขอเบิก</p>
-      </div>
-    </div>
-
-    <!-- PLACEHOLDER 1 -->
-    <figure style="margin: 0 0 16px; padding: 30px 18px; text-align: center;
-                   background: var(--color-bg-light); border: 2px dashed rgba(14,43,92,0.25);
-                   border-radius: 12px;">
-      <p style="margin: 0; font-weight: 700; color: var(--color-primary);">
-        Sample 1 &mdash; Anthropic, PBC receipt</p>
-      <p class="cell-th" style="margin: 4px 0 0; font-size: 0.92rem; color: var(--color-text-muted);">
-        ตัวอย่างที่ 1 &mdash; ใบเสร็จรับเงินจาก Anthropic, PBC</p>
-      <p style="margin: 12px 0 0; font-size: 0.8rem; color: var(--color-text-muted);">
-        Replace this box with:
-        <code>&lt;img src="images/sample-receipt.png" alt="Sample receipt"&gt;</code></p>
-    </figure>
-
-    <!-- PLACEHOLDER 2 -->
-    <figure style="margin: 0 0 16px; padding: 30px 18px; text-align: center;
-                   background: var(--color-bg-light); border: 2px dashed rgba(14,43,92,0.25);
-                   border-radius: 12px;">
-      <p style="margin: 0; font-weight: 700; color: var(--color-primary);">
-        Sample 2 &mdash; BE360 Payment Voucher request screen</p>
-      <p class="cell-th" style="margin: 4px 0 0; font-size: 0.92rem; color: var(--color-text-muted);">
-        ตัวอย่างที่ 2 &mdash; หน้าจอสร้าง Payment Voucher ในระบบ BE360</p>
-      <p style="margin: 12px 0 0; font-size: 0.8rem; color: var(--color-text-muted);">
-        Replace this box with:
-        <code>&lt;img src="images/sample-be360.png" alt="BE360 request screen"&gt;</code></p>
-    </figure>
-
-    <!-- PLACEHOLDER 3 -->
-    <figure style="margin: 0 0 8px; padding: 30px 18px; text-align: center;
-                   background: var(--color-bg-light); border: 2px dashed rgba(14,43,92,0.25);
-                   border-radius: 12px;">
-      <p style="margin: 0; font-weight: 700; color: var(--color-primary);">
-        Sample 3 &mdash; Credit card statement screenshot</p>
-      <p class="cell-th" style="margin: 4px 0 0; font-size: 0.92rem; color: var(--color-text-muted);">
-        ตัวอย่างที่ 3 &mdash; ภาพหน้าจอยอดบัตรเครดิต</p>
-      <p style="margin: 12px 0 0; font-size: 0.8rem; color: var(--color-text-muted);">
-        Replace this box with:
-        <code>&lt;img src="images/sample-statement.png" alt="Credit card screenshot"&gt;</code></p>
-    </figure>
-
-  </section>
+        <!-- ตารางคู่มือการกรอกระบบ Salesforce 360 -->
+        <h3 style="margin: 24px 0 12px 0; color: var(--color-primary); font-size: 1.15rem;">
+            Salesforce 360 Input Guide <span class="h-th" style="display:inline; font-size:0.95rem; font-weight:normal;">/ คู่มือการระบุข้อมูลบนระบบ Salesforce 360</span>
+        </h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #F8FAFC;">
+                    <th style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); width: 35%;">Salesforce Field</th>
+                    <th style="padding: 12px 14px; border-bottom: 2px solid var(--color-accent); width: 65%;">Required Value / สิ่งที่ต้องระบุให้ถูกต้อง</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Request Type</strong></td>
+                    <td>Select <code>Healthcare and Optical</code> only. <span class="cell-th">เลือกเป็น <code>Healthcare and Optical</code> เท่านั้น</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Cost Center</strong></td>
+                    <td>Select <code>1001003 Human Resource</code>. <span class="cell-th">ระบุเป็น <code>1001003 Human Resource</code></span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Cost Element Name</strong></td>
+                    <td>Select <code>Health care</code>. <span class="cell-th">ระบุเป็น <code>Health care</code></span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Date</strong></td>
+                    <td>Enter the exact date matching the Medical Certificate. <span class="cell-th">ระบุวันที่ให้ตรงตามเอกสารใบรับรองแพทย์</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 11px; border-bottom: 1px solid var(--border-color);"><strong>Issuer Name</strong></td>
