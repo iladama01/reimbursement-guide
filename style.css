@@ -2,15 +2,15 @@
 @import url('https://googleapis.com');
 
 :root {
-  --color-primary: #0E2B5C;
-  --color-accent: #00A3E0;
-  --color-bg-light: #F4F7FA;
-  --color-text-main: #1F2937;
-  --color-text-muted: #4B5563;
-  --color-white: #FFFFFF;
-  --color-danger: #DC2626;
-  --color-warn: #D97706;
-  --color-success: #16A34A;
+  --color-primary: #0E2B5C;     /* Beryl Navy Blue */
+  --color-accent: #00A3E0;      /* Digital Cyan */
+  --color-bg-light: #F4F7FA;    /* Ice Blue/Light Gray */
+  --color-text-main: #1F2937;   /* Charcoal Gray */
+  --color-text-muted: #4B5563;  /* Muted Gray */
+  --color-white: #FFFFFF;       /* Pure White */
+  --color-danger: #DC2626;      /* Red */
+  --color-warn: #D97706;        /* Orange */
+  --color-success: #16A34A;     /* Green */
   --border-color: #E5E7EB;
 }
 
@@ -31,39 +31,42 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== CONTROL LANG VISIBILITY ===== */
-/* ซ่อนเนื้อหาภาษาไทยในสถานะเริ่มต้น */
-[data-lang="th"] {
-  display: none !important;
+/* ===== NEW TOGGLE SYSTEM CONTROL ===== */
+body.lang-en .lang-th { display: none !important; }
+body.lang-th .lang-en { display: none !important; }
+body.lang-th tr.lang-en { display: none !important; }
+body.lang-th span.lang-en { display: none !important; }
+body.lang-th p.lang-en { display: none !important; }
+
+header {
+  position: relative;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 40px 20px;
 }
-[data-lang="en"] {
-  display: inline-block;
+header h1 {
+  margin: 0 110px 8px 0; /* เว้นพื้นที่ขวาไม่ให้บังปุ่ม */
+  font-size: 1.8rem;
+  font-weight: 800;
 }
-/* สลับเป็นซ่อนภาษาอังกฤษ และแสดงภาษาไทย เมื่อเปิดคลาส lang-th */
-body.lang-th [data-lang="en"] {
-  display: none !important;
-}
-body.lang-th [data-lang="th"] {
-  display: inline-block !important;
-}
-body.lang-th h1[data-lang="th"],
-body.lang-th h2[data-lang="th"],
-body.lang-th p[data-lang="th"] {
-  display: block !important;
+header p {
+  margin: 0 110px 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
 }
 
-/* ดีไซน์ปุ่มสลับภาษาลอยตัวสุดพรีเมียม */
+/* ปุ่มสลับภาษาด้านบนขวา */
 .lang-switcher {
   position: absolute;
-  top: 20px;
+  top: 35px;
   right: 20px;
   z-index: 100;
 }
 .lang-btn {
   background-color: var(--color-accent);
   color: var(--color-white);
-  border: none;
-  padding: 8px 18px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 16px;
   font-family: 'Public Sans', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
@@ -73,32 +76,15 @@ body.lang-th p[data-lang="th"] {
   transition: all 0.2s ease;
 }
 .lang-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 163, 224, 0.4);
-}
-
-header {
-  position: relative;
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 40px 20px;
-}
-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-header p {
-  margin: 0;
-  opacity: 0.85;
-  font-size: 0.95rem;
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 nav {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--border-color);
   padding: 16px 20px;
-  margin-top: 12px;
+  margin-top: 20px;
   border-radius: 8px;
 }
 nav p {
@@ -184,6 +170,7 @@ ul.checklist li::before {
   font-weight: 800;
 }
 
+/* ===== TABLE STYLES ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -193,12 +180,18 @@ table {
 th, td {
   padding: 12px 14px;
   border-bottom: 1px solid var(--border-color);
+  text-align: left;
 }
 th {
   background-color: #F8FAFC;
   color: var(--color-primary);
   font-weight: 700;
   border-bottom: 2px solid var(--color-accent);
+}
+.amounts td:last-child {
+  text-align: right;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
 }
 code {
   font-family: 'Courier New', Courier, monospace;
@@ -209,6 +202,27 @@ code {
 }
 .example-ok { color: var(--color-success); font-weight: 700; }
 .example-no { color: var(--color-danger); font-weight: 700; }
+
+/* ดีไซน์ปุ่มลิงก์พอร์ทัลแบบพรีเมียม */
+.portal-btn-container {
+  text-align: center;
+  margin: 32px 0 12px 0;
+}
+.portal-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 14px 28px;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 163, 224, 0.25);
+  transition: all 0.2s;
+}
+.portal-btn:hover {
+  background-color: var(--color-primary);
+}
 
 footer {
   padding: 32px 20px;
@@ -227,7 +241,7 @@ footer {
     border-radius: 0 0 12px 12px;
   }
   .lang-switcher {
-    top: 30px;
+    top: 56px;
     right: 40px;
   }
   nav {
@@ -244,5 +258,9 @@ footer {
   section {
     margin: 24px 0;
     padding: 32px 40px;
+  }
+  .portal-btn {
+    display: inline-block;
+    width: auto;
   }
 }
