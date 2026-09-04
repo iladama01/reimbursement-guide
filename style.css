@@ -683,3 +683,71 @@ footer {
     margin: 0 auto;
   }
 }
+/* =========================================================
+   FIELD CARDS
+   Used for the BE360 input guide instead of a table.
+   ========================================================= */
+
+.field-cards {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+
+.field-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  border: 2px solid rgba(0, 163, 224, 0.35);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* The blue numbered circle */
+.field-num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+}
+
+.field-body {
+  min-width: 0;     /* stops long values widening the card */
+}
+
+.field-name {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.field-value {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* For values that must be selected or typed exactly */
+.value-strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+@media (min-width: 760px) {
+
+  .field-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
