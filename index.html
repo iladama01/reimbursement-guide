@@ -311,55 +311,78 @@
       <span class="h-th">การบันทึกข้อมูลในระบบ BE360</span>
     </h3>
 
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th scope="col">Field <span class="cell-th">ช่องข้อมูล</span></th>
-          <th scope="col">Required value <span class="cell-th">ข้อมูลที่ต้องกรอก</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Request Type</td>
-          <td>Select <code>Payment Voucher</code>
-            <span class="cell-th">เลือก <code>Payment Voucher</code> เท่านั้น</span></td>
-        </tr>
-        <tr>
-          <td>Cost Center</td>
-          <td>Select <code>1001003 Human Resource</code>
-            <span class="cell-th">เลือก <code>1001003 Human Resource</code></span></td>
-        </tr>
-        <tr>
-          <td>Cost Element Name</td>
-          <td>Select <code>License / Subscription / Membership Fees</code>
-            <span class="cell-th">เลือก <code>License / Subscription / Membership Fees</code></span></td>
-        </tr>
-        <tr>
-          <td>Date</td>
-          <td>Enter the exact date printed on the Anthropic, PBC receipt
-            <span class="cell-th">ระบุวันที่ให้ตรงตามใบเสร็จรับเงินของ Anthropic, PBC</span></td>
-        </tr>
-        <tr>
-          <td>Issuer Name</td>
-          <td>Must be entered exactly as <code>Anthropic, PBC</code>
-            <span class="cell-th">ต้องระบุเป็น <code>Anthropic, PBC</code> เท่านั้น</span></td>
-        </tr>
-        <tr>
-          <td>Amount</td>
-          <td>Enter the total amount calculated at 50% Co-pay, in line with company policy
-            <span class="cell-th">ใส่ยอดเงินรวมที่คิดจากสัดส่วน 50% Co-pay ตามหลักเกณฑ์เงื่อนไขนโยบายของบริษัท</span></td>
-        </tr>
-        <tr>
-          <td>Description</td>
-          <td>Must follow this format:
-            <code>Anthropic, PBC, Claude Pro [Usage Period], Co-pay</code><br>
-            Example: <code>Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay</code>
-            <span class="cell-th">ต้องระบุรูปแบบดังนี้:
-              <code>Anthropic, PBC, Claude Pro [รอบช่วงเวลาการใช้งาน], Co-pay</code><br>
-              ตัวอย่าง: <code>Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay</code></span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="field-cards">
+
+      <div class="field-card">
+        <span class="field-num">1</span>
+        <div class="field-body">
+          <span class="field-name">Request Type</span>
+          <p class="field-value">Select <span class="value-strong">Payment Voucher</span>
+            <span class="cell-th">เลือก Payment Voucher เท่านั้น</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">2</span>
+        <div class="field-body">
+          <span class="field-name">Cost Center</span>
+          <p class="field-value">Select <span class="value-strong">1001003 Human Resource</span>
+            <span class="cell-th">เลือก 1001003 Human Resource</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">3</span>
+        <div class="field-body">
+          <span class="field-name">Cost Element Name</span>
+          <p class="field-value">Select
+            <span class="value-strong">License / Subscription / Membership Fees</span>
+            <span class="cell-th">เลือก License / Subscription / Membership Fees</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">4</span>
+        <div class="field-body">
+          <span class="field-name">Date</span>
+          <p class="field-value">Enter the exact date printed on the Anthropic, PBC receipt
+            <span class="cell-th">ระบุวันที่ให้ตรงตามใบเสร็จรับเงินของ Anthropic, PBC</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">5</span>
+        <div class="field-body">
+          <span class="field-name">Issuer Name</span>
+          <p class="field-value">Must be entered exactly as
+            <span class="value-strong">Anthropic, PBC</span>
+            <span class="cell-th">ต้องระบุเป็น Anthropic, PBC เท่านั้น</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">6</span>
+        <div class="field-body">
+          <span class="field-name">Amount</span>
+          <p class="field-value">Enter the total amount calculated at 50% Co-pay,
+            in line with company policy
+            <span class="cell-th">ใส่ยอดเงินรวมที่คิดจากสัดส่วน 50% Co-pay ตามหลักเกณฑ์เงื่อนไขนโยบายของบริษัท</span></p>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <span class="field-num">7</span>
+        <div class="field-body">
+          <span class="field-name">Description</span>
+          <p class="field-value">Must follow this format:<br>
+            <span class="value-strong">Anthropic, PBC, Claude Pro [Usage Period], Co-pay</span><br>
+            Example: Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay
+            <span class="cell-th">ต้องระบุรูปแบบดังนี้: Anthropic, PBC, Claude Pro [รอบช่วงเวลาการใช้งาน], Co-pay<br>
+              ตัวอย่าง: Anthropic, PBC/Claude Pro (Jan 01 - Feb 01, 2026) Co-pay</span></p>
+        </div>
+      </div>
+
+    </div>
     <h3>
       Notes
       <span class="h-th">หมายเหตุ</span>
