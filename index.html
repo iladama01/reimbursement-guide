@@ -126,3 +126,103 @@
         </ul>
       </div>
     </div>
+    <h3>
+      How to submit
+      <span class="h-th">วิธีการส่งเบิก</span>
+    </h3>
+
+    <div class="rule-grid">
+
+      <div class="rule-card">
+        <span class="chip chip-ok">Electronic <span class="chip-th">แบบออนไลน์</span></span>
+        <div class="bi">
+          <div class="bi-col">
+            <p class="bi-label">English</p>
+            <ol class="steps">
+              <li>Create the PV.</li>
+              <li>Attach the documents in Salesforce 360.</li>
+              <li>Submit online. No paper required.</li>
+            </ol>
+          </div>
+          <div class="bi-col bi-th">
+            <p class="bi-label">ภาษาไทย</p>
+            <ol class="steps">
+              <li>สร้างเอกสาร PV</li>
+              <li>แนบเอกสารในระบบ Salesforce 360</li>
+              <li>ส่งเบิกผ่านระบบออนไลน์ โดยไม่ต้องส่งเอกสารกระดาษ</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="rule-card">
+        <span class="chip chip-warn">Paper documents <span class="chip-th">เอกสารกระดาษ</span></span>
+        <div class="bi">
+          <div class="bi-col">
+            <p class="bi-label">English</p>
+            <ol class="steps">
+              <li>Write the <strong>PV number</strong> clearly on the document.</li>
+              <li>Submit it to Accounting on the date the PV is created, and before the 27th of the month.</li>
+            </ol>
+            <p class="rule-note">Example: <code>PT26-01-0001</code></p>
+          </div>
+          <div class="bi-col bi-th">
+            <p class="bi-label">ภาษาไทย</p>
+            <ol class="steps">
+              <li>เขียน<strong>เลขที่ PV</strong> บนเอกสารให้ชัดเจน</li>
+              <li>นำส่งฝ่ายบัญชีในวันที่สร้างเอกสาร PV และก่อนวันที่ 27 ของเดือน</li>
+            </ol>
+            <p class="rule-note">ตัวอย่าง: <code>PT26-01-0001</code></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3>
+      Entering the request in Salesforce 360
+      <span class="h-th">การบันทึกข้อมูลในระบบ Salesforce 360</span>
+    </h3>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Field <span class="cell-th">ช่องข้อมูล</span></th>
+          <th scope="col">What to enter <span class="cell-th">ข้อมูลที่ต้องกรอก</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Request Type</td>
+          <td>Healthcare and Optical</td>
+        </tr>
+        <tr>
+          <td>Cost Center</td>
+          <td><code>1001003</code> Human Resource</td>
+        </tr>
+        <tr>
+          <td>Cost Element Name</td>
+          <td>Health care</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>The date shown on the Medical Certificate
+            <span class="cell-th">วันที่ตามที่ปรากฏในใบรับรองแพทย์</span></td>
+        </tr>
+        <tr>
+          <td>Issuer Name</td>
+          <td>The name of the claimant
+            <span class="cell-th">ชื่อผู้ยื่นขอเบิก</span></td>
+        </tr>
+        <tr>
+          <td>Amount</td>
+          <td>The total amount shown on the receipt
+            <span class="cell-th">ใส่ยอดเงินรวมให้ตรงตามที่ปรากฏในใบเสร็จรับเงิน</span></td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td>Details of the treatment, or &ldquo;Glasses&rdquo; / &ldquo;Contact Lenses&rdquo;
+            <span class="cell-th">รายละเอียดการรักษา หรือระบุ &ldquo;Glasses&rdquo; / &ldquo;Contact Lenses&rdquo;</span></td>
+        </tr>
+      </tbody>
+    </table>
