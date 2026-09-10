@@ -6,8 +6,7 @@
    ========================================================= */
 
 
-/* ===== BRAND COLORS =====
-   Change a color once here and the whole site follows. */
+/* ===== BRAND COLORS ===== */
 
 :root {
   --color-primary:    #0E2B5C;   /* Beryl Navy Blue       */
@@ -40,7 +39,7 @@
 
 html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;   /* stops LINE resizing the text */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -93,7 +92,6 @@ header p {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Thai line inside the header sits under the English line */
 header .h-th {
   display: block;
   margin-top: 4px;
@@ -189,7 +187,6 @@ section h3 {
   line-height: 1.4;
 }
 
-/* The Thai half of a heading */
 .h-th {
   display: block;
   margin-top: 2px;
@@ -216,11 +213,7 @@ section p {
 }
 
 
-/* =========================================================
-   BILINGUAL BLOCKS
-   Phone: Thai sits below English, divided by a line.
-   Laptop: the two sit side by side in equal columns.
-   ========================================================= */
+/* ===== BILINGUAL BLOCKS ===== */
 
 .bi {
   display: grid;
@@ -228,7 +221,7 @@ section p {
 }
 
 .bi-col {
-  min-width: 0;    /* stops long words pushing the column wider */
+  min-width: 0;
 }
 
 .bi-th {
@@ -272,7 +265,6 @@ section p {
   margin-bottom: 0;
 }
 
-/* The cyan tick is drawn by CSS, not written in the HTML */
 .checklist li::before {
   content: "\2713";
   position: absolute;
@@ -305,11 +297,7 @@ section p {
 }
 
 
-/* ===== CALLOUT BOXES =====
-   callout-info    neutral note
-   callout-ok      the correct way
-   callout-warn    pay attention
-   callout-danger  the claim will be rejected */
+/* ===== CALLOUT BOXES ===== */
 
 .callout {
   border-left: 5px solid;
@@ -427,7 +415,7 @@ section p {
 
 .data-table {
   width: 100%;
-  border-collapse: collapse;   /* removes the gaps between cells */
+  border-collapse: collapse;
   margin: 10px 0 8px 0;
   font-size: 0.95rem;
 }
@@ -474,7 +462,6 @@ section p {
   font-weight: 600;
 }
 
-/* The Thai line inside a table cell */
 .cell-th {
   display: block;
   margin-top: 3px;
@@ -517,11 +504,11 @@ code {
 }
 
 
-/* ===== BE-CONNEXT BUTTON ===== */
+/* ===== BUTTONS ===== */
 
 .btn-primary {
-  display: block;
-  margin: 14px 0 8px 0;
+  display: inline-block;
+  margin: 14px auto 8px auto;
   padding: 16px 24px;
   border-radius: 10px;
   background-color: var(--color-accent);
@@ -548,7 +535,23 @@ code {
 }
 
 
-/* ===== ALLOWED / NOT ALLOWED EXAMPLES ===== */
+/* ===== IMAGES & FIGURES ===== */
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* ===== EXAMPLES ===== */
 
 .example {
   display: flex;
@@ -562,7 +565,7 @@ code {
 }
 
 .example-mark {
-  flex-shrink: 0;      /* stops the tick or cross being squashed */
+  flex-shrink: 0;
   font-size: 1.05rem;
   font-weight: 700;
 }
@@ -574,7 +577,64 @@ code {
 .example-no .example-mark { color: #DC2626; }
 
 
-/* ===== BOTTOM OF PAGE ===== */
+/* ===== FIELD CARDS ===== */
+
+.field-cards {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+
+.field-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  border: 2px solid rgba(0, 163, 224, 0.35);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.field-num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+}
+
+.field-body {
+  min-width: 0;
+}
+
+.field-name {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.field-value {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.value-strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+
+/* ===== FOOTER ===== */
 
 footer {
   padding: 26px 22px 44px;
@@ -586,7 +646,6 @@ footer {
 
 /* =========================================================
    BIGGER SCREENS (laptop and tablet)
-   Everything above is written for phones.
    ========================================================= */
 
 @media (min-width: 760px) {
@@ -600,7 +659,6 @@ footer {
   header h1 .h-th { font-size: 1.2rem; }
   header p { font-size: 1.05rem; }
 
-  /* The menu stays at the top of the screen while scrolling */
   nav {
     position: sticky;
     top: 0;
@@ -642,16 +700,15 @@ footer {
   }
 
   section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 26px auto;
     padding: 38px 42px;
-    scroll-margin-top: 82px;   /* clears the sticky menu */
+    scroll-margin-top: 82px;
   }
 
   section h2 { font-size: 1.5rem; }
   section h3 { font-size: 1.15rem; }
 
-  /* Here is the side-by-side layout */
   .bi {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -670,84 +727,16 @@ footer {
     gap: 18px;
   }
 
-  .btn-primary {
-    display: inline-block;
-    padding: 16px 32px;
+  .field-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
   .data-table { font-size: 1rem; }
   .data-table td:first-child { width: 30%; }
 
   footer {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-  }
-}
-/* =========================================================
-   FIELD CARDS
-   Used for the BE360 input guide instead of a table.
-   ========================================================= */
-
-.field-cards {
-  display: grid;
-  gap: 12px;
-  margin: 16px 0 8px;
-}
-
-.field-card {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  background-color: var(--color-white);
-  border: 2px solid rgba(0, 163, 224, 0.35);
-  border-radius: 14px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* The blue numbered circle */
-.field-num {
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  font-family: var(--font-en);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 34px;
-  text-align: center;
-}
-
-.field-body {
-  min-width: 0;     /* stops long values widening the card */
-}
-
-.field-name {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--color-primary);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.field-value {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* For values that must be selected or typed exactly */
-.value-strong {
-  color: var(--color-primary);
-  font-weight: 700;
-}
-
-@media (min-width: 760px) {
-
-  .field-cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
   }
 }
