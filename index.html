@@ -809,70 +809,114 @@
 
     <!-- ===== MILEAGE ===== -->
     <h3>
+      <h3>
       🚙 Personal vehicle &mdash; mileage allowance
       <span class="h-th">การใช้รถส่วนตัว &mdash; ค่าชดเชยระยะทาง</span>
     </h3>
 
-    <div class="callout callout-info">
-      <div class="bi">
-        <div class="bi-col">
-          <p class="callout-title">💰 Rate: <code>4 THB</code> per kilometre</p>
-          <p>Distance in km &times; 4 = amount claimable.</p>
-          <p>Record the travel date, origin, destination, project name, and purpose of travel.</p>
+    <!-- ===== MODULE 1 ===== -->
+    <div style="background: #fff; border: 2px solid rgba(0,163,224,.22); border-radius: 20px;
+                overflow: hidden; margin-bottom: 18px;
+                box-shadow: 0 6px 18px rgba(14,43,92,.08);">
+
+      <div style="display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+                  background: linear-gradient(90deg, #F4F7FA 0%, #E3F4FC 100%);
+                  border-bottom: 2px solid rgba(0,163,224,.22);">
+        <span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+                     background: linear-gradient(160deg, #00A3E0, #0E2B5C); color: #fff;
+                     font-weight: 700; font-size: 1.05rem; line-height: 40px;
+                     text-align: center;">1</span>
+        <span style="line-height: 1.35;">
+          <span style="display: block; font-weight: 700; color: var(--color-primary);">
+            💰 Calculation &amp; documents</span>
+          <span class="cell-th" style="margin-top: 2px;">การคำนวณและเอกสาร</span>
+        </span>
+      </div>
+
+      <div style="padding: 20px;">
+
+        <div style="background: var(--color-bg-light); border-radius: 14px; padding: 16px 18px;
+                    text-align: center; margin-bottom: 18px;">
+          <span style="display: block; font-size: 1.5rem; font-weight: 700;
+                       color: var(--color-primary);">4 THB / km</span>
+          <span style="display: block; margin-top: 4px; color: var(--color-text-muted);">
+            Distance in km &times; 4 = claimable amount
+            <span class="cell-th">ระยะทาง (กม.) &times; 4 = จำนวนเงินที่เบิกได้</span></span>
         </div>
-        <div class="bi-col bi-th">
-          <p class="callout-title">💰 อัตรา: <code>4 บาท</code> ต่อกิโลเมตร</p>
-          <p>ระยะทาง (กม.) &times; 4 = จำนวนเงินที่เบิกได้</p>
-          <p>ต้องระบุวันที่เดินทาง ต้นทาง ปลายทาง ชื่อโครงการ และวัตถุประสงค์ในการเดินทาง</p>
+
+        <div class="bi">
+          <div class="bi-col">
+            <p class="bi-label">English</p>
+            <ul class="checklist">
+              <li>📋 Log the travel date, origin, destination, project name,
+                and purpose of travel.</li>
+              <li>🗺️ Attach a Google Maps screenshot clearly showing the origin,
+                the destination, and the exact distance in kilometres.</li>
+            </ul>
+          </div>
+          <div class="bi-col bi-th">
+            <p class="bi-label">ภาษาไทย</p>
+            <ul class="checklist">
+              <li>📋 ระบุวันที่เดินทาง ต้นทาง ปลายทาง ชื่อโครงการ
+                และวัตถุประสงค์ในการเดินทาง</li>
+              <li>🗺️ แนบภาพหน้าจอ Google Maps ที่แสดงต้นทาง ปลายทาง
+                และระยะทางเป็นกิโลเมตรอย่างชัดเจน</li>
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
 
-    <div class="example example-ok">
-      <span class="example-mark">&#10004;</span>
-      <span>
-        <strong>Claimable routes</strong> &mdash; Home &rarr; Project Site &middot;
-        Project Site &rarr; Home &middot; Office &rarr; Project Site
-        <span class="cell-th"><strong>เส้นทางที่เบิกได้</strong> &mdash; บ้าน &rarr; ไซต์งาน &middot;
-          ไซต์งาน &rarr; บ้าน &middot; สำนักงาน &rarr; ไซต์งาน</span>
-      </span>
-    </div>
+    <!-- ===== MODULE 2 ===== -->
+    <div style="background: #fff; border: 2px solid rgba(0,163,224,.22); border-radius: 20px;
+                overflow: hidden; margin-bottom: 18px;
+                box-shadow: 0 6px 18px rgba(14,43,92,.08);">
 
-    <div class="callout callout-danger">
-      <div class="bi">
-        <div class="bi-col">
-          <p class="callout-title">❌ Routes that cannot be claimed</p>
+      <div style="display: flex; align-items: center; gap: 14px; padding: 16px 20px;
+                  background: linear-gradient(90deg, #F4F7FA 0%, #E3F4FC 100%);
+                  border-bottom: 2px solid rgba(0,163,224,.22);">
+        <span style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+                     background: linear-gradient(160deg, #00A3E0, #0E2B5C); color: #fff;
+                     font-weight: 700; font-size: 1.05rem; line-height: 40px;
+                     text-align: center;">2</span>
+        <span style="line-height: 1.35;">
+          <span style="display: block; font-weight: 700; color: var(--color-primary);">
+            🛣️ Claimable &amp; non-claimable routes</span>
+          <span class="cell-th" style="margin-top: 2px;">เส้นทางที่เบิกได้และไม่ได้</span>
+        </span>
+      </div>
+
+      <div style="padding: 20px;">
+
+        <div style="background: #ECFDF5; border-left: 5px solid #059669;
+                    border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;">
+          <p style="margin: 0 0 8px; font-weight: 700; color: #065F46;">
+            ✅ Claimable <span class="cell-th" style="display: inline; color: #065F46;">
+              เบิกได้</span></p>
           <ul class="plain-list">
-            <li>Home &rarr; Office</li>
-            <li>Office &rarr; Home</li>
+            <li>Home &harr; Project Site
+              <span class="cell-th">บ้าน &harr; ไซต์งาน</span></li>
+            <li>Office &harr; Project Site
+              <span class="cell-th">สำนักงาน &harr; ไซต์งาน</span></li>
           </ul>
-          <p>These are personal commuting and are never reimbursable.</p>
         </div>
-        <div class="bi-col bi-th">
-          <p class="callout-title">❌ เส้นทางที่ไม่สามารถเบิกได้</p>
-          <ul class="plain-list">
-            <li>บ้าน &rarr; สำนักงาน</li>
-            <li>สำนักงาน &rarr; บ้าน</li>
-          </ul>
-          <p>ถือเป็นการเดินทางส่วนบุคคล ไม่สามารถเบิกได้ทุกกรณี</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="bi">
-      <div class="bi-col">
-        <p class="bi-label">English</p>
-        <ul class="checklist">
-          <li>🗺️ Attach a Google Maps screenshot clearly showing the origin,
-            the destination, and the exact distance in kilometres.</li>
-        </ul>
-      </div>
-      <div class="bi-col bi-th">
-        <p class="bi-label">ภาษาไทย</p>
-        <ul class="checklist">
-          <li>🗺️ แนบภาพหน้าจอ Google Maps ที่แสดงต้นทาง ปลายทาง
-            และระยะทางเป็นกิโลเมตรอย่างชัดเจน</li>
-        </ul>
+        <div style="background: #FEF2F2; border-left: 5px solid #DC2626;
+                    border-radius: 12px; padding: 16px 18px;">
+          <p style="margin: 0 0 8px; font-weight: 700; color: #991B1B;">
+            ❌ Not claimable <span class="cell-th" style="display: inline; color: #991B1B;">
+              เบิกไม่ได้</span></p>
+          <ul class="plain-list">
+            <li>Home &harr; Office
+              <span class="cell-th">บ้าน &harr; สำนักงาน</span></li>
+          </ul>
+          <p style="margin: 10px 0 0; color: #991B1B;">
+            Personal commuting is never reimbursable.
+            <span class="cell-th" style="color: #991B1B;">
+              การเดินทางส่วนบุคคล ไม่สามารถเบิกได้ทุกกรณี</span></p>
+        </div>
+
       </div>
     </div>
 
