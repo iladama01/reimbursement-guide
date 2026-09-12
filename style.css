@@ -67,14 +67,14 @@ body {
 
 
 /* =========================================================
-   HEADER — light, minimal, with a faint pixel grid
+   HEADER — light, minimal, with three illustration cards
    ========================================================= */
 
 header {
   position: relative;
   background-color: #FAFAFA;
   border-bottom: 1px solid rgba(14, 43, 92, 0.09);
-  padding: 34px 20px 32px;
+  padding: 30px 18px 34px;
   text-align: center;
   overflow: hidden;
 }
@@ -84,62 +84,41 @@ header::before {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(14, 43, 92, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14, 43, 92, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(14, 43, 92, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 43, 92, 0.05) 1px, transparent 1px);
   background-size: 22px 22px;
-  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 0%, transparent 78%);
-  mask-image: radial-gradient(ellipse at 50% 40%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 35%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse at 50% 35%, #000 0%, transparent 78%);
   pointer-events: none;
 }
 
 .hd-wrap {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .hd-badge {
   display: inline-block;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   padding: 8px 20px;
   border: 1px solid rgba(14, 43, 92, 0.14);
   border-radius: 999px;
   background-color: var(--color-white);
   box-shadow: 0 2px 6px rgba(14, 43, 92, 0.05);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-primary);
-}
-
-.hd-art {
-  display: block;
-  width: 190px;
-  height: auto;
-  margin: 0 auto 20px;
-  fill: none;
-  stroke: var(--color-primary);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.85;
 }
 
 header h1 {
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
   color: var(--color-primary);
-  font-size: 1.72rem;
+  font-size: 1.85rem;
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-}
-
-header h1 .h-th {
-  display: block;
-  margin-top: 6px;
-  color: var(--color-accent);
-  font-size: 1.05rem;
-  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 header p {
@@ -149,37 +128,88 @@ header p {
   line-height: 1.6;
 }
 
-header p .h-th {
-  display: block;
-  margin-top: 4px;
-  color: rgba(0, 163, 224, 0.85);
-  font-size: 0.94rem;
+
+/* ===== THE THREE CARDS ===== */
+
+.hd-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 26px;
 }
+
+.hd-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1.5px solid rgba(14, 43, 92, 0.13);
+  border-radius: 20px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(14, 43, 92, 0.07);
+  text-align: left;
+}
+
+.hd-card svg {
+  flex-shrink: 0;
+  width: 58px;
+  height: auto;
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The accent shapes sit behind the outlines */
+.hd-card svg .fill {
+  fill: rgba(0, 163, 224, 0.20);
+  stroke: none;
+}
+
+.hd-card-txt {
+  color: var(--color-primary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 
 @media (min-width: 760px) {
 
   header {
-    padding: 56px 40px 52px;
-  }
-
-  .hd-art {
-    width: 250px;
-    margin-bottom: 26px;
+    padding: 54px 40px 52px;
   }
 
   header h1 {
-    font-size: 2.6rem;
-  }
-
-  header h1 .h-th {
-    font-size: 1.3rem;
+    font-size: 2.75rem;
   }
 
   header p {
-    font-size: 1.08rem;
+    font-size: 1.1rem;
+  }
+
+  .hd-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-top: 38px;
+  }
+
+  .hd-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 18px;
+    text-align: center;
+  }
+
+  .hd-card svg {
+    width: 104px;
+  }
+
+  .hd-card-txt {
+    font-size: 0.95rem;
   }
 }
-
 
 /* ===== MENU ===== */
 
