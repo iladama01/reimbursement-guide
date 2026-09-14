@@ -974,3 +974,134 @@ code.pv-code {
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
+/* ==========================================
+   BENTO GRID STYLES (for home.html)
+   ========================================== */
+
+:root {
+  --bg-bento-main: #FFFDF7;
+  --text-bento-dark: #2B2625;
+  
+  /* Bento Palette */
+  --color-hero: #D8E6FA;
+  --color-purple: #D5C2DF;
+  --color-mustard: #DDA336;
+  --color-orange: #EE5B2B;
+  --color-blue: #D6ECFA;
+  --color-cream: #F5EAB8;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-bento-dark);
+}
+
+.logo span {
+  color: var(--color-orange);
+}
+
+.system-btn {
+  text-decoration: none;
+  background: var(--text-bento-dark);
+  color: #FFF;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.system-btn:hover {
+  opacity: 0.85;
+}
+
+/* Grid Layout */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.bento-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 24px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text-bento-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+
+.plus-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Specific Card Rules */
+.card-hero {
+  background-color: var(--color-hero);
+  grid-row: span 2;
+}
+
+.card-purple { background-color: var(--color-purple); }
+.card-mustard { background-color: var(--color-mustard); color: #FFF; }
+.card-orange { background-color: var(--color-orange); color: #FFF; }
+.card-orange-alt { background-color: var(--color-orange); color: #FFF; }
+.card-blue { background-color: var(--color-blue); }
+.card-cream { background-color: var(--color-cream); }
+
+/* Responsive Grid for Mobile */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-hero {
+    grid-row: span 1;
+  }
+}
