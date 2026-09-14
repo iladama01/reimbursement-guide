@@ -98,55 +98,35 @@
 
   </header>
 
-<!-- ===== MENU (แก้ไขใหม่เป็นรูปแบบการ์ด 4 ช่องใหญ่) ===== -->
-  <nav class="landing-cards-container">
-    <div class="card-list">
-
-      <!-- ช่องที่ 1: Medical Expenses -->
-      <a href="#medical" class="info-card">
-        <div class="card-left">🏥</div>
-        <div class="card-divider"></div>
-        <div class="card-right">
-          <h2>1. Medical Expenses</h2>
-          <div class="desc-en">Submission Method, Deadlines, Notes</div>
-          <span class="desc-th">วิธีการส่งเบิก, กำหนดระยะเวลา, หมายเหตุ</span>
-        </div>
-      </a>
-
-      <!-- ช่องที่ 2: Claude Pro Subscription -->
-      <a href="#copay" class="info-card">
-        <div class="card-left">💻</div>
-        <div class="card-divider"></div>
-        <div class="card-right">
-          <h2>2. Claude Pro Subscription</h2>
-          <div class="desc-en">Eligibility &amp; Exceptions, <span class="text-warn">Important Requirements — Please read before submitting</span></div>
-          <span class="desc-th">ผู้มีสิทธิ์และข้อยกเว้น, <span class="text-warn">ข้อกำหนดสำคัญ — กรุณาอ่านก่อนยื่นขอเบิก</span></span>
-        </div>
-      </a>
-
-      <!-- ช่องที่ 3: Project & Sales Expenses -->
-      <a href="#project" class="info-card">
-        <div class="card-left">💼</div>
-        <div class="card-divider"></div>
-        <div class="card-right">
-          <h2>3. Project &amp; Sales Expenses</h2>
-          <div class="desc-en"><span class="text-warn">⚠️ CAC Form required for all external payments</span>, Non-tax-deductible merchants</div>
-          <span class="desc-th"><span class="text-warn">⚠️ ต้องกรอกแบบฟอร์ม CAC ทุกครั้งที่จ่ายให้บุคคลภายนอก</span>, กรณีร้านค้าไม่สามารถออกเอกสารทางภาษีได้</span>
-        </div>
-      </a>
-
-      <!-- ช่องที่ 4: Travel Expenses -->
-      <a href="#travel" class="info-card">
-        <div class="card-left">✈️</div>
-        <div class="card-divider"></div>
-        <div class="card-right">
-          <h2>4. ค่าใช้จ่ายในการเดินทาง</h2>
-          <div class="desc-en"><span class="text-warn">⚠️ Must attach all 3 required documents</span>, Eligible &amp; Ineligible Routes</div>
-          <span class="desc-th"><span class="text-warn">⚠️ ต้องแนบเอกสารครบทั้ง 3 รายการทุกครั้ง</span>, เส้นทางที่เบิกได้และไม่ได้</span>
-        </div>
-      </a>
-
-    </div>
+  <!-- ===== MENU ===== -->
+  <nav>
+    <ul>
+      <li><a href="#medical" class="nav-card">
+        <span class="nav-emoji">🏥</span>
+        <span class="nav-txt">Medical Expenses
+          <span class="nav-th">ค่ารักษาพยาบาล</span></span>
+      </a></li>
+      <li><a href="#copay" class="nav-card">
+        <span class="nav-emoji">🤝</span>
+        <span class="nav-txt">Co-pay Claims
+          <span class="nav-th">การเบิกแบบร่วมจ่าย</span></span>
+      </a></li>
+      <li><a href="#project" class="nav-card">
+        <span class="nav-emoji">💼</span>
+        <span class="nav-txt">Project &amp; Sales
+          <span class="nav-th">โครงการและฝ่ายขาย</span></span>
+      </a></li>
+      <li><a href="#qa" class="nav-card">
+        <span class="nav-emoji">💡</span>
+        <span class="nav-txt">Questions &amp; Answers
+          <span class="nav-th">คำถามที่พบบ่อย</span></span>
+      </a></li>
+      <li><a href="#travel" class="nav-card">
+        <span class="nav-emoji">✈️</span>
+        <span class="nav-txt">Travel Form
+          <span class="nav-th">แบบฟอร์มการเดินทาง</span></span>
+      </a></li>
+    </ul>
   </nav>
 
   <!-- =========================================================
@@ -227,26 +207,51 @@
       <span class="h-th">วิธีการส่งเบิก</span>
     </h3>
 
-    <div class="rule-card">
-      <div class="bi">
-        <div class="bi-col">
-          <p class="bi-label">English</p>
-          <ol class="steps">
-            <li><strong>Original Hardcopy:</strong> Submit in the HR drop box before the 27th of the month, with the Payment Voucher number written on all documents (e.g. <code class="pv-code">PT26-01-0001</code>).</li>
-            <li><strong>Electronic Documents:</strong> Attach them directly in BE360 while creating the Payment Voucher.</li>
-            <li>Please double-check all documents before final submission.</li>
-          </ol>
-        </div>
-        <div class="bi-col bi-th">
-          <p class="bi-label">ภาษาไทย</p>
-          <ol class="steps">
-            <li>เอกสาร<strong>ฉบับจริง</strong>ให้นำส่งที่กล่องรับเอกสารแผนก HR ภายในวันที่ 27 ของเดือน และระบุเลขที่ Payment Voucher บนเอกสารทุกครั้ง เช่น <code class="pv-code">PT26-01-0001</code></li>
-            <li>เอกสาร<strong>ฉบับ Electronic</strong> สามารถแนบเข้ามาในระบบ BE360 พร้อมกับตอนทำ Payment Voucher</li>
-            <li>ควรตรวจสอบเอกสารให้ถูกต้องและครบถ้วนก่อนนำส่งเบิกทุกครั้ง</li>
-          </ol>
+    <div class="rule-grid">
+
+      <div class="rule-card">
+        <span class="chip chip-ok">Electronic <span class="chip-th">แบบออนไลน์</span></span>
+        <div class="bi">
+          <div class="bi-col">
+            <p class="bi-label">English</p>
+            <ol class="steps">
+              <li>Create the PV.</li>
+              <li>Attach the documents in BE360 .</li>
+              <li>Submit online. No paper required.</li>
+            </ol>
+          </div>
+          <div class="bi-col bi-th">
+            <p class="bi-label">ภาษาไทย</p>
+            <ol class="steps">
+              <li>สร้างเอกสาร PV</li>
+              <li>แนบเอกสารในระบบ BE360 </li>
+              <li>ส่งเบิกผ่านระบบออนไลน์ โดยไม่ต้องส่งเอกสารกระดาษ</li>
+            </ol>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="rule-card">
+        <span class="chip chip-warn">Paper documents <span class="chip-th">เอกสารกระดาษ</span></span>
+        <div class="bi">
+          <div class="bi-col">
+            <p class="bi-label">English</p>
+            <ol class="steps">
+              <li>Write the <strong>PV number</strong> clearly on the document.</li>
+              <li>Submit it to Accounting on the date the PV is created, and before the 27th of the month.</li>
+            </ol>
+            <p class="rule-note">Example: <code>PT26-01-0001</code></p>
+          </div>
+          <div class="bi-col bi-th">
+            <p class="bi-label">ภาษาไทย</p>
+            <ol class="steps">
+              <li>เขียน<strong>เลขที่ PV</strong> บนเอกสารให้ชัดเจน</li>
+              <li>นำส่งฝ่ายบัญชีในวันที่สร้างเอกสาร PV และก่อนวันที่ 27 ของเดือน</li>
+            </ol>
+            <p class="rule-note">ตัวอย่าง: <code>PT26-01-0001</code></p>
+          </div>
+        </div>
+      </div>
 
     </div>
 
