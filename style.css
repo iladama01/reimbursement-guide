@@ -958,3 +958,19 @@ nav a.nav-card:focus-visible .nav-th {
     padding: 12px 8px;
   }
 }
+/* ===== PV NUMBER BADGE =====
+   A stronger version of <code> for the Payment Voucher example. */
+
+code.pv-code {
+  display: inline-block;
+  padding: 3px 11px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.86em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
