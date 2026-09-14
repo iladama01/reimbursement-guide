@@ -1105,3 +1105,85 @@ code.pv-code {
     grid-row: span 1;
   }
 }
+/* ==========================================
+   สไตล์สำหรับการ์ดเมนูใหม่ (4 ช่องแนวนอน)
+   ========================================== */
+.landing-cards-container {
+  max-width: 600px;
+  margin: 20px auto 40px auto;
+  padding: 0 16px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-card {
+  background: #FFFFFF;
+  border: 3px solid #38BDF8;
+  border-radius: 18px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.2);
+}
+
+.card-left {
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+}
+
+.card-divider {
+  width: 2px;
+  height: 55px;
+  border-left: 2px dashed #93C5FD;
+  flex-shrink: 0;
+}
+
+.card-right {
+  flex-grow: 1;
+}
+
+.card-right h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0284C7;
+  margin-bottom: 2px;
+  border: none;
+  padding: 0;
+}
+
+.card-right .desc-en {
+  font-size: 0.88rem;
+  color: #0F172A;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card-right .desc-th {
+  font-size: 0.78rem;
+  color: #475569;
+  margin-top: 2px;
+  display: block;
+  line-height: 1.3;
+}
+
+.text-warn {
+  color: #DC2626;
+  font-weight: 600;
+}
