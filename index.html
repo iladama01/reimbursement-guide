@@ -98,120 +98,55 @@
 
   </header>
 
-<!-- ===== MENU (การ์ด 4 ช่องสไตล์ infographic) ===== -->
-  <style>
-    .hero-card-list {
-      max-width: 520px;
-      margin: -20px auto 40px;
-      padding: 0 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+<!-- ===== MENU (แก้ไขใหม่เป็นรูปแบบการ์ด 4 ช่องใหญ่) ===== -->
+  <nav class="landing-cards-container">
+    <div class="card-list">
 
-    .info-card-link {
-      background: #FFFFFF;
-      border: 3.5px solid #38BDF8;
-      border-radius: 20px;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 6px 16px rgba(56, 189, 248, 0.15);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+      <!-- ช่องที่ 1: Medical Expenses -->
+      <a href="#medical" class="info-card">
+        <div class="card-left">🏥</div>
+        <div class="card-divider"></div>
+        <div class="card-right">
+          <h2>1. Medical Expenses</h2>
+          <div class="desc-en">Submission Method, Deadlines, Notes</div>
+          <span class="desc-th">วิธีการส่งเบิก, กำหนดระยะเวลา, หมายเหตุ</span>
+        </div>
+      </a>
 
-    .info-card-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);
-    }
+      <!-- ช่องที่ 2: Claude Pro Subscription -->
+      <a href="#copay" class="info-card">
+        <div class="card-left">💻</div>
+        <div class="card-divider"></div>
+        <div class="card-right">
+          <h2>2. Claude Pro Subscription</h2>
+          <div class="desc-en">Eligibility &amp; Exceptions, <span class="text-warn">Important Requirements — Please read before submitting</span></div>
+          <span class="desc-th">ผู้มีสิทธิ์และข้อยกเว้น, <span class="text-warn">ข้อกำหนดสำคัญ — กรุณาอ่านก่อนยื่นขอเบิก</span></span>
+        </div>
+      </a>
 
-    .card-icon-left {
-      width: 70px;
-      height: 70px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 44px;
-    }
+      <!-- ช่องที่ 3: Project & Sales Expenses -->
+      <a href="#project" class="info-card">
+        <div class="card-left">💼</div>
+        <div class="card-divider"></div>
+        <div class="card-right">
+          <h2>3. Project &amp; Sales Expenses</h2>
+          <div class="desc-en"><span class="text-warn">⚠️ CAC Form required for all external payments</span>, Non-tax-deductible merchants</div>
+          <span class="desc-th"><span class="text-warn">⚠️ ต้องกรอกแบบฟอร์ม CAC ทุกครั้งที่จ่ายให้บุคคลภายนอก</span>, กรณีร้านค้าไม่สามารถออกเอกสารทางภาษีได้</span>
+        </div>
+      </a>
 
-    .card-v-divider {
-      width: 2px;
-      height: 65px;
-      border-left: 2px dashed #93C5FD;
-      flex-shrink: 0;
-    }
+      <!-- ช่องที่ 4: Travel Expenses -->
+      <a href="#travel" class="info-card">
+        <div class="card-left">✈️</div>
+        <div class="card-divider"></div>
+        <div class="card-right">
+          <h2>4. ค่าใช้จ่ายในการเดินทาง</h2>
+          <div class="desc-en"><span class="text-warn">⚠️ Must attach all 3 required documents</span>, Eligible &amp; Ineligible Routes</div>
+          <span class="desc-th"><span class="text-warn">⚠️ ต้องแนบเอกสารครบทั้ง 3 รายการทุกครั้ง</span>, เส้นทางที่เบิกได้และไม่ได้</span>
+        </div>
+      </a>
 
-    .card-text-right {
-      flex-grow: 1;
-    }
-
-    .card-text-right h2 {
-      margin: 0 0 4px 0;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #0284C7;
-      line-height: 1.3;
-    }
-
-    .card-text-right p {
-      margin: 0;
-      font-size: 0.88rem;
-      color: #334155;
-      line-height: 1.45;
-    }
-
-    .text-warn {
-      color: #DC2626;
-      font-weight: 600;
-    }
-  </style>
-
-  <nav class="hero-card-list">
-
-    <!-- ช่องที่ 1: Medical Expenses -->
-    <a href="#medical" class="info-card-link">
-      <div class="card-icon-left">🏥</div>
-      <div class="card-v-divider"></div>
-      <div class="card-text-right">
-        <h2>1. Medical Expenses</h2>
-        <p>วิธีการส่งเบิก, กำหนดระยะเวลา, หมายเหตุ</p>
-      </div>
-    </a>
-
-    <!-- ช่องที่ 2: Claude Pro Subscription -->
-    <a href="#copay" class="info-card-link">
-      <div class="card-icon-left">💻</div>
-      <div class="card-v-divider"></div>
-      <div class="card-text-right">
-        <h2>2. Claude Pro Subscription</h2>
-        <p>ผู้มีสิทธิ์และข้อยกเว้น, <span class="text-warn">ข้อกำหนดสำคัญ — กรุณาอ่านก่อนยื่นขอเบิก</span></p>
-      </div>
-    </a>
-
-    <!-- ช่องที่ 3: Project & Sales Expenses -->
-    <a href="#project" class="info-card-link">
-      <div class="card-icon-left">💼</div>
-      <div class="card-v-divider"></div>
-      <div class="card-text-right">
-        <h2>3. Project &amp; Sales Expenses</h2>
-        <p><span class="text-warn">⚠️ ต้องกรอกแบบฟอร์ม CAC ทุกครั้งที่จ่ายให้บุคคลภายนอก</span>, กรณีร้านค้าไม่สามารถออกเอกสารทางภาษีได้</p>
-      </div>
-    </a>
-
-    <!-- ช่องที่ 4: ค่าใช้จ่ายในการเดินทาง -->
-    <a href="#travel" class="info-card-link">
-      <div class="card-icon-left">✈️</div>
-      <div class="card-v-divider"></div>
-      <div class="card-text-right">
-        <h2>4. ค่าใช้จ่ายในการเดินทาง</h2>
-        <p><span class="text-warn">⚠️ ต้องแนบเอกสารครบทั้ง 3 รายการทุกครั้ง</span>, เส้นทางที่เบิกได้และไม่ได้</p>
-      </div>
-    </a>
-
+    </div>
   </nav>
 
   <!-- =========================================================
